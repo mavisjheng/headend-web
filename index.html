@@ -7,7 +7,7 @@
 <!--<![endif]-->
 
 <head>
-    <title>Headend</title>
+    <title>Home Page</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
@@ -29,7 +29,7 @@
         <![endif]-->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <label class="navbar-brand">HeadEnd</label>
+            <label class="navbar-brand">Headend</label>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -103,10 +103,8 @@
             </div>
         </div>
 
-        <hr>
-
         <footer>
-            <div class="navbar navbar-dafault navbar-fixed-bottom">
+            <div class="navbar navbar-default navbar-fixed-bottom">
                 <div class="container">
                     <p class="navbar-text pull-left">&copy; AcBel 2014</p>
                     <p class="navbar-text pull-left">Site Built By Er-Jhen Jheng</p>
@@ -119,6 +117,7 @@
     <div class="modal fade" id="contact" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
+
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                     </button>
@@ -128,21 +127,21 @@
                 <div class="modal-body">
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Name</label>
+                            <label for="contact-name" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Full Name">
+                                <input type="text" class="form-control" id="contact-name" placeholder="Full Name">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Email</label>
+                            <label for="contact-email" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" placeholder="Email Address">
+                                <input type="email" class="form-control" id="contact-email" placeholder="you@example.com">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Message</label>
+                            <label for="contact-msg" class="col-sm-2 control-label">Message</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" rows="5"></textarea>
+                                <textarea class="form-control" rows="5" id="contact-msg"></textarea>
                             </div>
                         </div>
                     </form>
@@ -150,8 +149,9 @@
                 <!-- /.modal-body -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Send Message</button>
+                    <button type="button" class="btn btn-primary" type="submit">Send Message</button>
                 </div>
+
                 <!-- /.modal-footer -->
             </div>
             <!-- /.modal-content -->

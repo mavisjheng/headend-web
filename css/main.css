@@ -3,8 +3,29 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+	margin-bottom: 80px;
+}
 
+.page-header {
+	margin-top: 0;
+}
 
+.panel {
+	margin-top: 35px;
+}
+
+.list-group {
+	margin-top: 35px;
+}
+
+.panel-body {
+	padding-top: 0;
+}
+
+.featuredImg {
+	margin-bottom: 15px;
+}
 
 
 
