@@ -7,8 +7,21 @@ body {
 	margin-bottom: 80px;
 }
 
-.page-header {
-	margin-top: 0;
+h3 {
+	margin-top: 10px;
+}
+
+.no-padding {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.panel-body {
+	padding-top: 0;
+}
+
+.featuredImg {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .panel {
@@ -18,16 +31,6 @@ body {
 .list-group {
 	margin-top: 35px;
 }
-
-.panel-body {
-	padding-top: 0;
-}
-
-.featuredImg {
-	margin-bottom: 15px;
-}
-
-
 
 
 

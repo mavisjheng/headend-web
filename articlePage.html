@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <style>
     body {
         padding-top: 50px;
@@ -76,20 +76,27 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <div class="panel panel-default">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3>Whatever you want  <small>December 5th</small></h3>
+                    </div>
                     <div class="panel-body">
-                        <div class="page-header">
-                            <h3>Whatever you want  <small>Posted on December 5th</small></h3>
-                            <img class="featuredImg" src="img/pic1.jpg" width=100%>
-                            <p>As a 15-year-old, living in South Jamaica, Queens, I was arrested on a criminal trespass charge after unlawfully entering and remaining in the home of an acquaintance. Officers took me to the 103rd Precinct — the same precinct where an unarmed Sean Bell was later shot and killed by the police — and brought me into a room in the basement. They kicked me in the groin repeatedly. Out of every part of my body, that’s what they targeted. Then I spent the night in Spofford juvenile detention center</p>
-                            <h4>A new heading</h4>
-                            <p>As a 15-year-old, living in South Jamaica, Queens, I was arrested on a criminal trespass charge after unlawfully entering and remaining in the home of an acquaintance. Officers took me to the 103rd Precinct — the same precinct where an unarmed Sean Bell was later shot and killed by the police — and brought me into a room in the basement. They kicked me in the groin repeatedly. Out of every part of my body, that’s what they targeted. Then I spent the night in Spofford juvenile detention center</p>
-                        </div>
+                        <img class="featuredImg img-responsive img-rounded" src="img/pic1.jpg" width=100%>
+                        <p><p class="lead">As a 15-year-old, living in South Jamaica, Queens, I was arrested on a criminal trespass charge after unlawfully entering and remaining in the home of an acquaintance.</p> Officers took me to the 103rd Precinct — the same precinct where an unarmed Sean Bell was later shot and killed by the police — and brought me into a room in the basement. They kicked me in the groin repeatedly. Out of every part of my body, that’s what they targeted. Then I spent the night in Spofford juvenile detention center</p>
+                        <h4>A new heading</h4>
+                        <p>As a 15-year-old, living in South Jamaica, Queens, I was arrested on a criminal trespass charge after unlawfully entering and remaining in the home of an acquaintance. Officers took me to the 103rd Precinct — the same precinct where an unarmed Sean Bell was later shot and killed by the police — and brought me into a room in the basement. They kicked me in the groin repeatedly. Out of every part of my body, that’s what they targeted. Then I spent the night in Spofford juvenile detention center</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="list-group">
+                    <div class="list-group-item no-padding">
+                        <div class="row">
+                            <div class="col-md-4 bg-success">Nesting Column1</div>
+                            <div class="col-md-4 bg-info">Nesting Column2</div>
+                            <div class="col-md-4 bg-warning">Nesting Column3</div>
+                        </div>
+                    </div>
                     <a href="#" class="list-group-item">
                         <h4 class="list-group-item-heading">Cras justo odio</h4>
                         <p class="list-group-item-text">With the additional money, Uber is setting itself up for what its investors hope will be the next mammoth initial public offering, following in the footsteps of Facebook and the Chinese e-commerce company Alibaba Group</p>
@@ -137,7 +144,7 @@
                 </div>
                 <!-- /.modal-header -->
                 <div class="modal-body">
-                    <form class="form-horizontal" role="form">
+                    <form method="post" id="contactform" class="form-horizontal" role="form">
                         <div class="form-group">
                             <label for="contact-name" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
@@ -161,7 +168,7 @@
                 <!-- /.modal-body -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" type="submit">Send Message</button>
+                    <button type="button" id="contactbtn" class="btn btn-primary">Send Message</button>
                 </div>
 
                 <!-- /.modal-footer -->
@@ -194,6 +201,44 @@
     ga('create', 'UA-XXXXX-X');
     ga('send', 'pageview');
     </script>
+    <!-- start of validate contact form -->
+    <script>
+        function validateText(id) {
+            if ($("#"+id).val()==null || $("#"+id).val()=="") {
+                var div = $("#"+id).closest("div");
+                div.removeClass("has-success");
+                $("#glypcn"+id).remove();
+                div.addClass("has-error has-feedback");
+                div.append('<span id="glypcn'+id+'" class="glyphicon glyphicon-remove form-control-feedback"></span>');
+                return false;
+            }
+            else {
+                var div = $("#"+id).closest("div");
+                div.removeClass("has-error");
+                div.addClass("has-success has-feedback");
+                $("#glypcn"+id).remove();
+                div.append('<span id="glypcn'+id+'" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+                return true;
+            }
+        }
+        $(document).ready(
+            function() {
+                $("#contactbtn").click(function() {
+                    if (!validateText("contact-name")) {
+                        return false;
+                    }
+                    if (!validateText("contact-email")) {
+                        return false;
+                    }
+                    if (!validateText("contact-msg")) {
+                        return false;
+                    }
+                    $("form#contactform").submit();
+                });
+            }
+        );
+    </script>
+    <!-- end of validate contact form -->
 </body>
 
 </html>
