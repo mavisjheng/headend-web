@@ -1,0 +1,35 @@
+.navbar {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.navbar-brand {
+	font-size: 24px;
+	color: #000000;
+}
+
+.navbar-font, .list-group-item {
+	font-size: 18px;
+	font-family: Century Gothic;
+}
+
+ul.nav li a, div p a {
+    color: #000000 !important;
+}
+
+body, .navbar-footer {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	background-color: #CBCBC6;
+}
+
+.panel-body {
+	font-size: 18px;
+	font-family: Microsoft JhengHei;
+}
+
+footer div div p {
+	font-size: 18px;
+	color: #000000;
+	font-family: Century Gothic;
+}

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -17,10 +17,11 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
+    <![endif]-->
 </head>
 
 <body>
+    <!-- start of login form -->
     <div class="container font-agency">
         <form class="form-signin" role="form">
             <h1 class="form-signin-heading">Log in to Headend</h1>
@@ -29,14 +30,13 @@
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
             <div class="checkbox">
-                <label class="font-20">
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
+                <label class="font-20"><input type="checkbox" value="remember-me"> Remember me </label>
             </div>
-            <button class="btn btn-default btn-primary btn-block font-24" type="submit">Log in</button>
+            <button class="btn btn-primary btn-block font-24" type="submit">Log in</button>
         </form>
     </div>
-
+    <!-- end of login form -->
+    <!-- start of the footer -->
     <footer class="font-agency">
         <div class="navbar navbar-default navbar-fixed-bottom site-footer">
             <div class="container">
@@ -44,9 +44,10 @@
             </div>
         </div>
     </footer>
-        
+    <!-- end of the footer -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 
 </html>
+
