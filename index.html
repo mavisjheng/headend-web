@@ -1,276 +1,98 @@
 <!DOCTYPE html>
-<html class="no-js">
 <html lang="en">
 
 <head>
     <title>Headend Home</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/vendor/bootstrap.css" rel="stylesheet">
-    <link href="css/vendor/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body>
-    <!-- start of navbar-header -->
-    <div class="container navbar-font">
-        <nav class="navbar navbar-default">
-
+    <!-- start of navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <label class="navbar-brand">Headend</label>
+                <a class="navbar-brand" href="index.html">Headend</a>
             </div>
-
-            <div id="navbar" class="navbar-collapse collapse">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
-                    <li><a href="#contact" data-toggle="modal"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact Us</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Dropdown<span class="caret"></span></a>
-                        <ul class="dropdown-menu font-agency" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="dcu.html">Dcu Service</a>
+                            </li>
+                            <li><a href="meter.html">Meter Service</a>
+                            </li>
+                            <li><a href="platform.html">Platform Service</a>
+                            </li>
+                            <li><a href="notification.html">Notification Service</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
-                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="#">Log Out&nbsp;</a></p>   
-            </div><!-- end of nav-collapse -->
-        </nav>
-    </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="about.html">About AcBel</a>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="login.html" class="navbar-link">Log Out</a>
+                </p>
+            </div>
+        </div>
+    </nav>
 
-    <div class="container">
+    <!-- start of breadcrumb -->
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h1 class="panel-title text-center"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span><b> Platform Service</b></h1>
-                    </div>
-                    <div class="panel-body">
-                        <p>提供一介面供用戶端取得儲存於Headend的讀表資料</p>
-                    </div>
-                    <!-- List group -->
-                    <ul class="list-group">
-                        <li class="list-group-item"><a data-toggle="collapse" href="#platformOne" aria-hidden="true">Get Meter Alive Report</a></li>
-                        <div id="platformOne" class="collapse">
-                            <div class="panel-body">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="control-label">Start Time</label>
-                                        <div class="col-md-11">
-                                            <input type="email" class="form-control" id="inputEmail3" placeholder="YYYY-MM-DDThh:mm:ss">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputPassword3" class="col-md-6 control-label">End Time</label>
-                                        <div class="col-md-11">
-                                            <input type="password" class="form-control" id="inputPassword3" placeholder="YYYY-MM-DDThh:mm:ss">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-offset-7 col-md-1">
-                                            <button type="submit" class="btn btn-warning">Send</button>
-                                        </div>
-                                      </div>
-                                </form>
-                            </div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#platformTwo" aria-hidden="true">Update Meter Password</a></li>
-                        <div id="platformTwo" class="collapse">
-                            <div class="panel-body">Meter ID, Password</div>
-                        </div>
-                    </ul>
-                </div>   
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h1 class="panel-title text-center"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span><b> Dcu Service</b></h1>
-                    </div>
-                    <div class="panel-body">
-                        <p>提供一介面供用戶端取得儲存於Dcu上的讀表資料及Usage資料</p>
-                    </div>
-                    <!-- List group -->
-                    <ul class="list-group">
-                        <li class="list-group-item"><a data-toggle="collapse" href="#dcuOne" aria-hidden="true">Dcu Action</a></li>
-                        <div id="dcuOne" class="collapse">
-                            <div class="panel-body">Action Type, Dcu ID, Session Key Seed, Master Key</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#dcuTwo" aria-hidden="true">Get Capability</a></li>
-                        <div id="dcuTwo" class="collapse">
-                            <div class="panel-body">Capability Type, Meter ID</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#dcuThree" aria-hidden="true">Get Usage</a></li>
-                        <div id="dcuThree" class="collapse">
-                            <div class="panel-body">Usage Type, Meter ID</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#dcuFour" aria-hidden="true">Get Historic Data</a></li>
-                        <div id="dcuFour" class="collapse">
-                            <div class="panel-body">Dcu ID, Meter ID, Item, Start Time, End Time</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#dcuFive" aria-hidden="true">Get Dcu Log</a></li>
-                        <div id="dcuFive" class="collapse">
-                            <div class="panel-body">Dcu ID, Start Time, End Time</div>
-                        </div>
-                    </ul>
-                </div>          
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h1 class="panel-title text-center"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span><b> Meter Service</b></h1>
-                    </div>
-                    <div class="panel-body">
-                        <p>提供一介面供用戶端傳送參數設定或指令訊息至電表</p>
-                    </div>
-                    <!-- List group -->
-                    <ul class="list-group">
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterOne" aria-hidden="true">Meter Action</a></li>
-                        <div id="meterOne" class="collapse">
-                            <div class="panel-body">Action Type, Meter ID, Password</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterTwo" aria-hidden="true">Get Capability</a></li>
-                        <div id="meterTwo" class="collapse">
-                            <div class="panel-body">Capability Type, Meter ID</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterThree" aria-hidden="true">Get Usage</a></li>
-                        <div id="meterThree" class="collapse">
-                            <div class="panel-body">Usage Type, Meter ID</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterFour" aria-hidden="true">Get Historic Data</a></li>
-                        <div id="meterFour" class="collapse">
-                            <div class="panel-body">Meter ID, Item, Start Time, End Time</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterFive" aria-hidden="true">Get Instant Data</a></li>
-                        <div id="meterFive" class="collapse">
-                            <div class="panel-body">Meter ID, Item</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterSix" aria-hidden="true">Set Usage</a></li>
-                        <div id="meterSix" class="collapse">
-                            <div class="panel-body">Usage Type, Meter ID, Value</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterSeven" aria-hidden="true">Set Tou</a></li>
-                        <div id="meterSeven" class="collapse">
-                            <div class="panel-body">Meter ID, Tou</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterEight" aria-hidden="true">Set Register Data</a></li>
-                        <div id="meterEight" class="collapse">
-                            <div class="panel-body">Meter ID, Key, Value</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterNine" aria-hidden="true">Set Password</a></li>
-                        <div id="meterNine" class="collapse">
-                            <div class="panel-body">Meter ID, Password</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterTen" aria-hidden="true">Update Meter Program</a></li>
-                        <div id="meterTen" class="collapse">
-                            <div class="panel-body">Meter ID, Uri</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterEleven" aria-hidden="true">Update Meter Firmware</a></li>
-                        <div id="meterEleven" class="collapse">
-                            <div class="panel-body">Meter ID, Uri</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#meterTwelve" aria-hidden="true">Send IHD Message</a></li>
-                        <div id="meterTwelve" class="collapse">
-                            <div class="panel-body">Meter ID, Message</div>
-                        </div>
-                    </ul>
-                </div>     
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h1 class="panel-title text-center"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span><b> Notification Service</b></h1>
-                    </div>
-                    <div class="panel-body">
-                        <p>提供一介面供用戶端訂閱事件通知</p>
-                    </div>
-                    <!-- List group -->
-                    <ul class="list-group">
-                        <li class="list-group-item"><a data-toggle="collapse" href="#notificationOne" aria-hidden="true">Register User</a></li>
-                        <div id="notificationOne" class="collapse">
-                            <div class="panel-body">Name, Protocol, Content Type, Address</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#notificationTwo" aria-hidden="true">Unregister User</a></li>
-                        <div id="notificationTwo" class="collapse">
-                            <div class="panel-body">User ID</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#notificationThree" aria-hidden="true">Subscribe Notification</a></li>
-                        <div id="notificationThree" class="collapse">
-                            <div class="panel-body">User ID, Notification</div>
-                        </div>
-                        <li class="list-group-item"><a data-toggle="collapse" href="#notificationFour" aria-hidden="true">Unsubscribe Notification</a></li>
-                        <div id="notificationFour" class="collapse">
-                            <div class="panel-body">User ID, Notification</div>
-                        </div>
-                    </ul>
-                </div>     
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Headend</a>
+                    </li>
+                    <li class="active">Overview</li>
+                    <a href="index.html" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Refresh</a>
+                </ol>
             </div>
         </div>
     </div>
 
-    <!-- start of the footer -->
-    <footer>
-        <div class="navbar navbar-footer" role="navigation" >
-            <div class="container">
-                <p class="navbar-text pull-right">&copy; 2014 <a href="http://www.acbel.com/About_AcBel.aspx">AcBel Polytech Inc. </a> Designed By Er-Jhen Jheng</p>
+    <!-- start of content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">Content -- Meter Status</div>
+        </div>
+    </div>
+
+    <!-- start of footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 navbar-fixed-bottom">
+                <p class="pull-right">&copy; 2015 <a href="http://www.acbel.com/About_AcBel.aspx">AcBel Polytech Inc.</a> Designed By Er-Jhen Jheng</p>
             </div>
         </div>
-    </footer>
-    <!-- end of the footer -->
-
-    <!-- start of the Contact Us form -->
-    <div class="modal fade" id="contact" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                    </button>
-                    <h3 class="modal-title">Contact AcBel</h3>
-                </div>
-                <div class="modal-body">
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label for="contact-name" class="col-sm-2 control-label">Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="contact-name" placeholder="Full Name" required autofocus>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-email" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="contact-email" placeholder="you@example.com" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-msg" class="col-sm-2 control-label">Message</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" rows="7" id="contact-msg" placeholder="Your message here..." required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <button type="button" class="btn btn-default col-md-offset-5" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Send</button>
-                        </div>  
-                    </form>
-                </div><!-- end of modal-body -->
-            </div><!-- end of modal-content -->
-        </div><!-- end of modal-dialog -->
-    </div><!-- end of the Contact Us form -->
+    </div>
 
     <script src="js/vendor/jquery-1.11.1.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!--<script>
     (function(b, o, i, l, e, r) {
@@ -291,4 +113,3 @@
 </body>
 
 </html>
-
