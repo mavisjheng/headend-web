@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Headend Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <!-- start of navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Headend</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="dcu.html">Dcu Service</a>
+                            </li>
+                            <li><a href="meter.html">Meter Service</a>
+                            </li>
+                            <li><a href="platform.html">Platform Service</a>
+                            </li>
+                            <li><a href="notification.html">Notification Service</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="about.html">About AcBel</a>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="login.html" class="navbar-link">Log Out</a>
+                </p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- start of content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- start of left content: service list tabs -->
+            <div class="col-md-2">
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                    <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Service Description</a>
+                    </li>
+                    <li role="presentation"><a href="#action" aria-controls="action" role="tab" data-toggle="tab">Meter Action</a>
+                    </li>
+                    <li role="presentation"><a href="#capability" aria-controls="capability" role="tab" data-toggle="tab">Get Capability</a>
+                    </li>
+                    <li role="presentation"><a href="#usage" aria-controls="usage" role="tab" data-toggle="tab">Get Usage</a>
+                    </li>
+                    <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">Get Historic Data</a>
+                    </li>
+                    <li role="presentation"><a href="#instant" aria-controls="instant" role="tab" data-toggle="tab">Get Instant Data</a>
+                    </li>
+                    <li role="presentation"><a href="#setusage" aria-controls="setusage" role="tab" data-toggle="tab">Set Usage</a>
+                    </li>
+                    <li role="presentation"><a href="#settou" aria-controls="settou" role="tab" data-toggle="tab">Set Tou</a>
+                    </li>
+                    <li role="presentation"><a href="#setregister" aria-controls="setregister" role="tab" data-toggle="tab">Set Register Data</a>
+                    </li>
+                    <li role="presentation"><a href="#setpwd" aria-controls="setpwd" role="tab" data-toggle="tab">Set Password</a>
+                    </li>
+                    <li role="presentation"><a href="#program" aria-controls="program" role="tab" data-toggle="tab">Update Program</a>
+                    </li>
+                    <li role="presentation"><a href="#firmware" aria-controls="firmware" role="tab" data-toggle="tab">Update Firmware</a>
+                    </li>
+                    <li role="presentation"><a href="#sendihd" aria-controls="sendihd" role="tab" data-toggle="tab">Send IHD Message</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- start of right content: breadcrumb and services content -->
+            <div class="col-md-10">
+                <!-- start of breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Headend</a>
+                    </li>
+                    <li><a href="meter.html">Meter Service</a>
+                    </li>
+                    <li class="active">Service Description</li>
+                    <a href="dcu.html" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Refresh</a>
+                </ol>
+                <!-- start of services content -->
+                <div class="tab-content">
+                    <!-- start of service description -->
+                    <div role="tabpanel" class="tab-pane active" id="description">
+                        <p>Service Description is the first page of Meter Service.</p>
+                        <p>This page tells how the functions work, and maybe screenshots, step by step instruction.</p>
+                    </div>
+                    <!-- start of meter action -->
+                    <div role="tabpanel" class="tab-pane" id="action">
+                        <!-- start of meter action request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="actiontype" class="col-md-offset-1 col-md-4 control-label">Action Type</label>
+                                    <div class="dropdown col-md-7">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="actiontype" data-toggle="dropdown" aria-expanded="true">
+                                            Please Choose
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="actiontype">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">time-sync</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">demand-reset</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">activate</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">deactivate</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd" class="col-md-offset-1 col-md-4 control-label">Password</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="pwd">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of meter action response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of get capability -->
+                    <div role="tabpanel" class="tab-pane" id="capability">
+                        <!-- start of get capability request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="capabilitytype" class="col-md-offset-1 col-md-4 control-label">Capability Type</label>
+                                    <div class="dropdown col-md-7">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="capabilitytype" data-toggle="dropdown" aria-expanded="true">
+                                            Please Choose
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="capabilitytype">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile-capability</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-capability</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">display-capability</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-capability</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-capability</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-capability</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">register-data-capability</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of get capability response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of get usage -->
+                    <div role="tabpanel" class="tab-pane" id="usage">
+                        <!-- start of get usage request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="usagetype" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
+                                    <div class="dropdown col-md-7">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="usagetype" data-toggle="dropdown" aria-expanded="true">
+                                            Please Choose
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="usagetype">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile-usage</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-usage</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">display-usage</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-usage</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-usage</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-usage</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">register-data-usage</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of get usage response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of get historic data -->
+                    <div role="tabpanel" class="tab-pane" id="history">
+                        <!-- start of get historic data request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="datatype" class="col-md-offset-1 col-md-4 control-label">Data Type</label>
+                                    <div class="dropdown col-md-7">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="datatype" data-toggle="dropdown" aria-expanded="true">
+                                            Please Choose
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="datatype">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-log</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-log</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="item" class="col-md-offset-1 col-md-4 control-label">Item</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="item">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="starttime" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
+                                    <div class="col-md-7">
+                                        <input type="datetime-local" class="form-control" id="starttime">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="endtime" class="col-md-offset-1 col-md-4 control-label">End Time</label>
+                                    <div class="col-md-7">
+                                        <input type="datetime-local" class="form-control" id="endtime">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of get historic data response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of get instant data -->
+                    <div role="tabpanel" class="tab-pane" id="instant">
+                        <!-- start of get instant data request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="item" class="col-md-offset-1 col-md-4 control-label">Item</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="item">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of get instant data response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of set usage -->
+                    <div role="tabpanel" class="tab-pane" id="setusage">
+                        <!-- start of set usage request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="usagetype" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
+                                    <div class="dropdown col-md-7">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="usagetype" data-toggle="dropdown" aria-expanded="true">
+                                            Please Choose
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="usagetype">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile-usage</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-usage</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">display-usage</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-usage</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-usage</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-usage</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="value" class="col-md-offset-1 col-md-4 control-label">Value</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="value">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of set usage response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of set tou -->
+                    <div role="tabpanel" class="tab-pane" id="settou">
+                        <!-- start of set tou request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tou" class="col-md-offset-1 col-md-4 control-label">Tou</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="tou">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of set tou response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of set register data -->
+                    <div role="tabpanel" class="tab-pane" id="setregister">
+                        <!-- start of set register data request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="key" class="col-md-offset-1 col-md-4 control-label">Key</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="key">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="value" class="col-md-offset-1 col-md-4 control-label">Value</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="value">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of set register data response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of set password -->
+                    <div role="tabpanel" class="tab-pane" id="setpwd">
+                        <!-- start of set password request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd" class="col-md-offset-1 col-md-4 control-label">Password</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="pwd">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of set password response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of update program -->
+                    <div role="tabpanel" class="tab-pane" id="program">
+                        <!-- start of update program request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="uri" class="col-md-offset-1 col-md-4 control-label">URI</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="uri">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of update program response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of update firmware -->
+                    <div role="tabpanel" class="tab-pane" id="firmware">
+                        <!-- start of update firmware request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="uri" class="col-md-offset-1 col-md-4 control-label">URI</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="uri">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of update firmware response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of send IHD message -->
+                    <div role="tabpanel" class="tab-pane" id="sendihd">
+                        <!-- start of send IHD message request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message" class="col-md-offset-1 col-md-4 control-label">Message</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="message">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of send IHD message response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- start of footer -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-2 navbar-fixed-bottom">
+                        <p class="pull-right">&copy; 2015 <a href="http://www.acbel.com/About_AcBel.aspx">AcBel Polytech Inc.</a> Designed By Er-Jhen Jheng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>-->
+</body>
+
+</html>
