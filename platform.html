@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Headend Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <!-- start of navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Headend</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="dcu.html">Dcu Service</a>
+                            </li>
+                            <li><a href="meter.html">Meter Service</a>
+                            </li>
+                            <li><a href="platform.html">Platform Service</a>
+                            </li>
+                            <li><a href="notification.html">Notification Service</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="about.html">About AcBel</a>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="login.html" class="navbar-link">Log Out</a>
+                </p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- start of content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- start of left content: service list tabs -->
+            <div class="col-md-2">
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                    <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Service Description</a>
+                    </li>
+                    <li role="presentation"><a href="#alivereport" aria-controls="alivereport" role="tab" data-toggle="tab">Get Meter Alive Report</a>
+                    </li>
+                    <li role="presentation"><a href="#updatepwd" aria-controls="updatepwd" role="tab" data-toggle="tab">Update Meter Password</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- start of right content: breadcrumb and services content -->
+            <div class="col-md-10">
+                <!-- start of breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Headend</a>
+                    </li>
+                    <li><a href="platform.html">Platform Service</a>
+                    </li>
+                    <li class="active">Service Description</li>
+                    <a href="dcu.html" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Refresh</a>
+                </ol>
+                <!-- start of services content -->
+                <div class="tab-content">
+                    <!-- start of service description -->
+                    <div role="tabpanel" class="tab-pane active" id="description">
+                        <p>Service Description is the first page of Platform Service.</p>
+                        <p>This page tells how the functions work, and maybe screenshots, step by step instruction.</p>
+                    </div>
+                    <!-- start of get meter alive report -->
+                    <div role="tabpanel" class="tab-pane" id="alivereport">
+                        <!-- start of get meter alive report request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="starttime" class="col-md-4 control-label">Start Time</label>
+                                    <div class="col-md-offset-1 col-md-7">
+                                        <input type="datetime-local" class="form-control" id="starttime">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="endtime" class="col-md-4 control-label">End Time</label>
+                                    <div class="col-md-offset-1 col-md-7">
+                                        <input type="datetime-local" class="form-control" id="endtime">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of get meter alive report response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- start of update meter password -->
+                    <div role="tabpanel" class="tab-pane" id="updatepwd">
+                        <!-- start of update meter password request -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="meterid" class="col-md-4 control-label">Meter ID</label>
+                                    <div class="col-md-offset-1 col-md-7">
+                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd" class="col-md-4 control-label">Password</label>
+                                    <div class="col-md-offset-1 col-md-7">
+                                        <input type="text" class="form-control" id="pwd">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-5 col-md-4">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- start of update meter password response -->
+                        <div class="col-md-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="status">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="taskuid">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <div class="col-md-7">
+                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- start of footer -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-2 navbar-fixed-bottom">
+                        <p class="pull-right">&copy; 2015 <a href="http://www.acbel.com/About_AcBel.aspx">AcBel Polytech Inc.</a> Designed By Er-Jhen Jheng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>-->
+</body>
+
+</html>
