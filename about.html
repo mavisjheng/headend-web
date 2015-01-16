@@ -47,7 +47,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="about.html">About AcBel</a>
                             </li>
-                            <li><a href="contact.html">Contact Us</a>
+                            <li><a href="" data-toggle="modal" data-target="#contactus">Contact Us</a>
                             </li>
                         </ul>
                     </li>
@@ -66,7 +66,7 @@
                     <li><a href="index.html">Headend</a>
                     </li>
                     <li class="active">About AcBel</li>
-                    <a href="" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Contact Us</a>
+                    <a href="" class="label label-success pull-right" data-toggle="modal" data-target="#contactus"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Contact Us</a>
                 </ol>
             </div>
         </div>
@@ -104,6 +104,45 @@
         <div class="row">
             <div class="col-md-12 navbar-fixed-bottom">
                 <p class="pull-right">&copy; 2015 <a href="http://www.acbel.com/About_AcBel.aspx">AcBel Polytech Inc.</a> Designed By Er-Jhen Jheng</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- start of Contact Us Modal -->
+    <div class="modal fade" id="contactus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Contact AcBel</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
+                            <div class="col-sm-7">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="you@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
+                            <div class="col-sm-7">
+                                <textarea type="text" class="form-control" rows="7" id="inputMessage" placeholder="Your Message here"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
             </div>
         </div>
     </div>

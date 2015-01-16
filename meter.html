@@ -47,7 +47,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="about.html">About AcBel</a>
                             </li>
-                            <li><a href="contact.html">Contact Us</a>
+                            <li><a href="" data-toggle="modal" data-target="#contactus">Contact Us</a>
                             </li>
                         </ul>
                     </li>
@@ -202,8 +202,8 @@
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-capability</a>
                                             </li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-capability</a>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-capability</a>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">register-data-capability</a>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-capability</a>
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">register-data-capability</a>
                                         </ul>
                                     </div>
                                 </div>
@@ -269,8 +269,8 @@
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-usage</a>
                                             </li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-usage</a>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-usage</a>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">register-data-usage</a>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-usage</a>
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">register-data-usage</a>
                                         </ul>
                                     </div>
                                 </div>
@@ -330,10 +330,10 @@
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile</a>
                                             </li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata</a>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-log</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-log</a>
-                                            </li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-log</a>
+                                                </li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-log</a>
+                                                </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -468,7 +468,7 @@
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-usage</a>
                                             </li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-usage</a>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-usage</a>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-usage</a>
                                         </ul>
                                     </div>
                                 </div>
@@ -838,6 +838,45 @@
                     <div class="col-md-10 col-md-offset-2 navbar-fixed-bottom">
                         <p class="pull-right">&copy; 2015 <a href="http://www.acbel.com/About_AcBel.aspx">AcBel Polytech Inc.</a> Designed By Er-Jhen Jheng</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- start of Contact Us Modal -->
+    <div class="modal fade" id="contactus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Contact AcBel</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
+                            <div class="col-sm-7">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="you@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
+                            <div class="col-sm-7">
+                                <textarea type="text" class="form-control" rows="7" id="inputMessage" placeholder="Your Message here"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </div>
             </div>
         </div>
