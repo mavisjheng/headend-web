@@ -17,7 +17,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -25,7 +25,7 @@
                 </button>
                 <a class="navbar-brand" href="index.html">Headend</a>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
@@ -66,15 +66,15 @@
                 <ul class="nav nav-pills nav-stacked" role="tablist">
                     <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Service Description</a>
                     </li>
-                    <li role="presentation"><a href="#action" aria-controls="action" role="tab" data-toggle="tab">Dcu Action</a>
+                    <li role="presentation"><a href="#dcuaction" aria-controls="action" role="tab" data-toggle="tab">Dcu Action</a>
                     </li>
-                    <li role="presentation"><a href="#capability" aria-controls="capability" role="tab" data-toggle="tab">Get Capability</a>
+                    <li role="presentation"><a href="#getcapability" aria-controls="capability" role="tab" data-toggle="tab">Get Capability</a>
                     </li>
-                    <li role="presentation"><a href="#usage" aria-controls="usage" role="tab" data-toggle="tab">Get Usage</a>
+                    <li role="presentation"><a href="#getusage" aria-controls="usage" role="tab" data-toggle="tab">Get Usage</a>
                     </li>
-                    <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">Get Historic Data</a>
+                    <li role="presentation"><a href="#gethistory" aria-controls="history" role="tab" data-toggle="tab">Get Historic Data</a>
                     </li>
-                    <li role="presentation"><a href="#log" aria-controls="log" role="tab" data-toggle="tab">Get Dcu Log</a>
+                    <li role="presentation"><a href="#getlog" aria-controls="log" role="tab" data-toggle="tab">Get Dcu Log</a>
                     </li>
                 </ul>
             </div>
@@ -87,7 +87,7 @@
                     <li><a href="dcu.html">Dcu Service</a>
                     </li>
                     <li class="active">Service Description</li>
-                    <a href="dcu.html" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Refresh</a>
+                    <a href="dcu.html" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Reset Form</a>
                 </ol>
                 <!-- start of services content -->
                 <div class="tab-content">
@@ -97,50 +97,42 @@
                         <p>This page tells how the functions work, and maybe screenshots, step by step instruction.</p>
                     </div>
                     <!-- start of dcu action -->
-                    <div role="tabpanel" class="tab-pane" id="action">
+                    <div role="tabpanel" class="tab-pane" id="dcuaction">
                         <!-- start of dcu action request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <p for="actiontype" class="col-md-offset-1 col-md-4 control-label">Action Type</p>
-                                    <div class="dropdown col-md-7">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="actiontype" data-toggle="dropdown" aria-expanded="true">
-                                            Please Choose
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="actiontype">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">re-registration</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">activate</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">deactivate</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">update-secutiry-key</a>
-                                            </li>
-                                        </ul>
+                                    <label for="actiontype" class="col-md-offset-1 col-md-4 control-label">Action Type</label>
+                                    <div class="col-md-7">
+                                        <select name="actiontype">
+                                            <option value="re-registration" selected>re-registration</option>
+                                            <option value="activate">activate</option>
+                                            <option value="deactivate">deactivate</option>
+                                            <option value="update-security-key">update-security-key</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <p for="dcuid" class="col-md-offset-1 col-md-4 control-label">Dcu ID</p>
+                                    <label for="dcuid1" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="dcuid" placeholder="12-digit">
+                                        <input type="text" name="dcuid1" class="form-control" id="dcuid1" placeholder="12-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <p for="sessionkey" class="col-md-5 control-label">Session Key Seed</p>
+                                    <label for="sessionkey" class="col-md-5 control-label">Session Key Seed</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="sessionkey">
+                                        <input type="text" name="sessionkey" class="form-control" id="sessionkey" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <p for="masterkey" class="col-md-offset-1 col-md-4 control-label">Master Key</p>
+                                    <label for="masterkey" class="col-md-offset-1 col-md-4 control-label">Master Key</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="masterkey">
+                                        <input type="text" name="masterkey" class="form-control" id="masterkey" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -173,40 +165,32 @@
                         </div>
                     </div>
                     <!-- start of get capability -->
-                    <div role="tabpanel" class="tab-pane" id="capability">
+                    <div role="tabpanel" class="tab-pane" id="getcapability">
                         <!-- start of get capability request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <label for="capabilitytype" class="col-md-offset-1 col-md-4 control-label">Capability Type</label>
-                                    <div class="dropdown col-md-7">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="capabilitytype" data-toggle="dropdown" aria-expanded="true">
-                                            Please Choose
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="capabilitytype">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile-capability</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-capability</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">display-capability</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-capability</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-capability</a>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-capability</a>
-                                        </ul>
+                                    <div class="col-md-7">
+                                        <select name="capabilitytype">
+                                            <option value="load-profile-capability" selected>load-profile-capability</option>
+                                            <option value="alarm-capability">alarm-capability</option>
+                                            <option value="display-capability">display-capability</option>
+                                            <option value="event-capability">event-capability</option>
+                                            <option value="midnight-registerdata-capability">midnight-registerdata-capability</option>
+                                            <option value="alternative-display-capability">alternative-display-capability</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid1" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid1" class="form-control" id="meterid1" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -239,40 +223,32 @@
                         </div>
                     </div>
                     <!-- start of get usage -->
-                    <div role="tabpanel" class="tab-pane" id="usage">
+                    <div role="tabpanel" class="tab-pane" id="getusage">
                         <!-- start of get usage request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <label for="usagetype" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
-                                    <div class="dropdown col-md-7">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="usagetype" data-toggle="dropdown" aria-expanded="true">
-                                            Please Choose
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="usagetype">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">display-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-usage</a>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-usage</a>
-                                        </ul>
+                                    <div class="col-md-7">
+                                        <select name="usagetype">
+                                            <option value="load-profile-usage" selected>load-profile-usage</option>
+                                            <option value="alarm-usage">alarm-usage</option>
+                                            <option value="display-usage">display-usage</option>
+                                            <option value="event-usage">event-usage</option>
+                                            <option value="midnight-registerdata-usage">midnight-registerdata-usage</option>
+                                            <option value="alternative-display-usage">alternative-display-usage</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid2" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid2" class="form-control" id="meterid2" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -305,61 +281,54 @@
                         </div>
                     </div>
                     <!-- start of get historic data -->
-                    <div role="tabpanel" class="tab-pane" id="history">
+                    <div role="tabpanel" class="tab-pane" id="gethistory">
                         <!-- start of get historic data request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <label for="datatype" class="col-md-offset-1 col-md-4 control-label">Data Type</label>
-                                    <div class="dropdown col-md-7">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="datatype" data-toggle="dropdown" aria-expanded="true">
-                                            Please Choose
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="datatype">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata</a>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-log</a>
-                                                </li>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-log</a>
-                                                </li>
-                                        </ul>
+                                    <div class="col-md-7">
+                                        <select name="datatype">
+                                            <option value="load-profile" selected>load-profile</option>
+                                            <option value="midnight-registerdata">midnight-registerdata</option>
+                                            <option value="event-log">event-log</option>
+                                            <option value="alarm-log">alarm-log</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="dcuid" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
+                                    <label for="dcuid2" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="dcuid" placeholder="12-digit">
+                                        <input type="text" name="dcuid2" class="form-control" id="dcuid2" placeholder="12-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid3" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid3" class="form-control" id="meterid3" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="item" class="col-md-offset-1 col-md-4 control-label">Item</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="item">
+                                        <input type="text" class="form-control" id="item" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="starttime" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
+                                    <label for="starttime1" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" class="form-control" id="starttime">
+                                        <input type="datetime-local" name="starttime1" class="form-control" id="starttime1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="endtime" class="col-md-offset-1 col-md-4 control-label">End Time</label>
+                                    <label for="endtime1" class="col-md-offset-1 col-md-4 control-label">End Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" class="form-control" id="endtime">
+                                        <input type="datetime-local" name="endtime1" class="form-control" id="endtime1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -392,31 +361,31 @@
                         </div>
                     </div>
                     <!-- start of get dcu log -->
-                    <div role="tabpanel" class="tab-pane" id="log">
+                    <div role="tabpanel" class="tab-pane" id="getlog">
                         <!-- start of get dcu log request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="dcuid" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
+                                    <label for="dcuid3" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="dcuid" placeholder="12-digit">
+                                        <input type="text" name="dcuid3" class="form-control" id="dcuid3" placeholder="12-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="starttime" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
+                                    <label for="starttime2" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" class="form-control" id="starttime">
+                                        <input type="datetime-local" name="starttime2" class="form-control" id="starttime2" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="endtime" class="col-md-offset-1 col-md-4 control-label">End Time</label>
+                                    <label for="endtime2" class="col-md-offset-1 col-md-4 control-label">End Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" class="form-control" id="endtime">
+                                        <input type="datetime-local" name="endtime2" class="form-control" id="endtime2" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>

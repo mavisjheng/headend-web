@@ -17,7 +17,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -25,7 +25,7 @@
                 </button>
                 <a class="navbar-brand" href="index.html">Headend</a>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
@@ -85,7 +85,7 @@
                     <li><a href="notification.html">Notification Service</a>
                     </li>
                     <li class="active">Service Description</li>
-                    <a href="notification.html" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Refresh</a>
+                    <a href="notification.html" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Reset Form</a>
                 </ol>
                 <!-- start of services content -->
                 <div class="tab-content">
@@ -102,30 +102,30 @@
                                 <div class="form-group">
                                     <label for="username" class="col-md-offset-1 col-md-4 control-label">User Name</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="username">
+                                        <input type="text" name="username" class="form-control" id="username" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="protocol" class="col-md-offset-1 col-md-4 control-label">Protocol</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="protocol">
+                                        <input type="text" name="protocol" class="form-control" id="protocol" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="contenttype" class="col-md-offset-1 col-md-4 control-label">Content Type</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="contenttype">
+                                        <input type="text" name="contenttype" class="form-control" id="contenttype" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="address" class="col-md-offset-1 col-md-4 control-label">Address</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="address">
+                                        <input type="text" name="address" class="form-control" id="address" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -163,14 +163,14 @@
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="userid" class="col-md-offset-1 col-md-4 control-label">User ID</label>
+                                    <label for="userid1" class="col-md-offset-1 col-md-4 control-label">User ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="userid">
+                                        <input type="text" name="userid1" class="form-control" id="userid1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -202,20 +202,20 @@
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="userid" class="col-md-offset-1 col-md-4 control-label">User ID</label>
+                                    <label for="userid2" class="col-md-offset-1 col-md-4 control-label">User ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="userid">
+                                        <input type="text" name="userid2" class="form-control" id="userid2" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="notificationtype" class="col-md-5 control-label">Notification Type</label>
+                                    <label for="notificationtype1" class="col-md-5 control-label">Notification Type</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="notificationtype">
+                                        <input type="text" name="notificationtype1" class="form-control" id="notificationtype1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -247,20 +247,20 @@
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="userid" class="col-md-offset-1 col-md-4 control-label">User ID</label>
+                                    <label for="userid3" class="col-md-offset-1 col-md-4 control-label">User ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="userid">
+                                        <input type="text" name="userid3" class="form-control" id="userid3" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="notificationtype" class="col-md-5 control-label">Notification Type</label>
+                                    <label for="notificationtype2" class="col-md-5 control-label">Notification Type</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="notificationtype">
+                                        <input type="text" name="notificationtype2" class="form-control" id="notificationtype2" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>

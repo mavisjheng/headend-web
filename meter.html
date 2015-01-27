@@ -17,7 +17,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -25,7 +25,7 @@
                 </button>
                 <a class="navbar-brand" href="index.html">Headend</a>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
@@ -66,15 +66,15 @@
                 <ul class="nav nav-pills nav-stacked" role="tablist">
                     <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Service Description</a>
                     </li>
-                    <li role="presentation"><a href="#action" aria-controls="action" role="tab" data-toggle="tab">Meter Action</a>
+                    <li role="presentation"><a href="#meteraction" aria-controls="meteraction" role="tab" data-toggle="tab">Meter Action</a>
                     </li>
-                    <li role="presentation"><a href="#capability" aria-controls="capability" role="tab" data-toggle="tab">Get Capability</a>
+                    <li role="presentation"><a href="#getcapability" aria-controls="getcapability" role="tab" data-toggle="tab">Get Capability</a>
                     </li>
-                    <li role="presentation"><a href="#usage" aria-controls="usage" role="tab" data-toggle="tab">Get Usage</a>
+                    <li role="presentation"><a href="#getusage" aria-controls="getusage" role="tab" data-toggle="tab">Get Usage</a>
                     </li>
-                    <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">Get Historic Data</a>
+                    <li role="presentation"><a href="#gethistory" aria-controls="gethistory" role="tab" data-toggle="tab">Get Historic Data</a>
                     </li>
-                    <li role="presentation"><a href="#instant" aria-controls="instant" role="tab" data-toggle="tab">Get Instant Data</a>
+                    <li role="presentation"><a href="#getinstant" aria-controls="getinstant" role="tab" data-toggle="tab">Get Instant Data</a>
                     </li>
                     <li role="presentation"><a href="#setusage" aria-controls="setusage" role="tab" data-toggle="tab">Set Usage</a>
                     </li>
@@ -84,9 +84,9 @@
                     </li>
                     <li role="presentation"><a href="#setpwd" aria-controls="setpwd" role="tab" data-toggle="tab">Set Password</a>
                     </li>
-                    <li role="presentation"><a href="#program" aria-controls="program" role="tab" data-toggle="tab">Update Program</a>
+                    <li role="presentation"><a href="#updateprogram" aria-controls="updateprogram" role="tab" data-toggle="tab">Update Program</a>
                     </li>
-                    <li role="presentation"><a href="#firmware" aria-controls="firmware" role="tab" data-toggle="tab">Update Firmware</a>
+                    <li role="presentation"><a href="#updatefirmware" aria-controls="updatefirmware" role="tab" data-toggle="tab">Update Firmware</a>
                     </li>
                     <li role="presentation"><a href="#sendihd" aria-controls="sendihd" role="tab" data-toggle="tab">Send IHD Message</a>
                     </li>
@@ -101,7 +101,7 @@
                     <li><a href="meter.html">Meter Service</a>
                     </li>
                     <li class="active">Service Description</li>
-                    <a href="meter.html" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Refresh</a>
+                    <a href="meter.html" class="label label-success pull-right"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Reset Form</a>
                 </ol>
                 <!-- start of services content -->
                 <div class="tab-content">
@@ -111,44 +111,36 @@
                         <p>This page tells how the functions work, and maybe screenshots, step by step instruction.</p>
                     </div>
                     <!-- start of meter action -->
-                    <div role="tabpanel" class="tab-pane" id="action">
+                    <div role="tabpanel" class="tab-pane" id="meteraction">
                         <!-- start of meter action request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <label for="actiontype" class="col-md-offset-1 col-md-4 control-label">Action Type</label>
-                                    <div class="dropdown col-md-7">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="actiontype" data-toggle="dropdown" aria-expanded="true">
-                                            Please Choose
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="actiontype">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">time-sync</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">demand-reset</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">activate</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">deactivate</a>
-                                            </li>
-                                        </ul>
+                                    <div class="col-md-7">
+                                        <select name="actiontype">
+                                            <option value="time-sync" selected>time-sync</option>
+                                            <option value="demand-reset">demand-reset</option>
+                                            <option value="activate">activate</option>
+                                            <option value="deactivate">deactivate</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid1" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid1" class="form-control" id="meterid1" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwd" class="col-md-offset-1 col-md-4 control-label">Password</label>
+                                    <label for="pwd1" class="col-md-offset-1 col-md-4 control-label">Password</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="pwd">
+                                        <input type="text" name="pwd1" class="form-control" id="pwd1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -181,41 +173,33 @@
                         </div>
                     </div>
                     <!-- start of get capability -->
-                    <div role="tabpanel" class="tab-pane" id="capability">
+                    <div role="tabpanel" class="tab-pane" id="getcapability">
                         <!-- start of get capability request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <label for="capabilitytype" class="col-md-offset-1 col-md-4 control-label">Capability Type</label>
-                                    <div class="dropdown col-md-7">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="capabilitytype" data-toggle="dropdown" aria-expanded="true">
-                                            Please Choose
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="capabilitytype">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile-capability</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-capability</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">display-capability</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-capability</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-capability</a>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-capability</a>
-                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">register-data-capability</a>
-                                        </ul>
+                                    <div class="col-md-7">
+                                        <select name="capabilitytype">
+                                            <option value="load-profile-capability" selected>load-profile-capability</option>
+                                            <option value="alarm-capability">alarm-capability</option>
+                                            <option value="display-capability">display-capability</option>
+                                            <option value="event-capability">event-capability</option>
+                                            <option value="midnight-registerdata-capability">midnight-registerdata-capability</option>
+                                            <option value="alternative-display-capability">alternative-display-capability</option>
+                                            <option value="register-data-capability">register-data-capability</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid2" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid2" class="form-control" id="meterid2" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -248,41 +232,33 @@
                         </div>
                     </div>
                     <!-- start of get usage -->
-                    <div role="tabpanel" class="tab-pane" id="usage">
+                    <div role="tabpanel" class="tab-pane" id="getusage">
                         <!-- start of get usage request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="usagetype" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
-                                    <div class="dropdown col-md-7">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="usagetype" data-toggle="dropdown" aria-expanded="true">
-                                            Please Choose
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="usagetype">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">display-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-usage</a>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-usage</a>
-                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">register-data-usage</a>
-                                        </ul>
+                                    <label for="usagetype1" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
+                                    <div class="col-md-7">
+                                        <select name="usagetype1">
+                                            <option value="load-profile-usage" selected>load-profile-usage</option>
+                                            <option value="alarm-usage">alarm-usage</option>
+                                            <option value="display-usage">display-usage</option>
+                                            <option value="event-usage">event-usage</option>
+                                            <option value="midnight-registerdata-usage">midnight-registerdata-usage</option>
+                                            <option value="alternative-display-usage">alternative-display-usage</option>
+                                            <option value="register-data-usage">register-data-usage</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid3" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid3" class="form-control" id="meterid3" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -315,55 +291,48 @@
                         </div>
                     </div>
                     <!-- start of get historic data -->
-                    <div role="tabpanel" class="tab-pane" id="history">
+                    <div role="tabpanel" class="tab-pane" id="gethistory">
                         <!-- start of get historic data request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <label for="datatype" class="col-md-offset-1 col-md-4 control-label">Data Type</label>
-                                    <div class="dropdown col-md-7">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="datatype" data-toggle="dropdown" aria-expanded="true">
-                                            Please Choose
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="datatype">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata</a>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-log</a>
-                                                </li>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-log</a>
-                                                </li>
-                                        </ul>
+                                    <div class="col-md-7">
+                                        <select name="datatype">
+                                            <option value="load-profile" selected>load-profile</option>
+                                            <option value="midnight-registerdata">midnight-registerdata</option>
+                                            <option value="event-log">event-log</option>
+                                            <option value="alarm-log">alarm-log</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid4" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid4" class="form-control" id="meterid4" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="item" class="col-md-offset-1 col-md-4 control-label">Item</label>
+                                    <label for="item1" class="col-md-offset-1 col-md-4 control-label">Item</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="item">
+                                        <input type="text" name="item1" class="form-control" id="item1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="starttime" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
+                                    <label for="starttime1" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" class="form-control" id="starttime">
+                                        <input type="datetime-local" name="starttime1" class="form-control" id="starttime1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="endtime" class="col-md-offset-1 col-md-4 control-label">End Time</label>
+                                    <label for="endtime1" class="col-md-offset-1 col-md-4 control-label">End Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" class="form-control" id="endtime">
+                                        <input type="datetime-local" name="endtime1" class="form-control" id="endtime1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -396,25 +365,25 @@
                         </div>
                     </div>
                     <!-- start of get instant data -->
-                    <div role="tabpanel" class="tab-pane" id="instant">
+                    <div role="tabpanel" class="tab-pane" id="getinstant">
                         <!-- start of get instant data request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid5" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid5" class="form-control" id="meterid5" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="item" class="col-md-offset-1 col-md-4 control-label">Item</label>
+                                    <label for="item2" class="col-md-offset-1 col-md-4 control-label">Item</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="item">
+                                        <input type="text" name="item2" class="form-control" id="item2" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -452,41 +421,33 @@
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="usagetype" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
-                                    <div class="dropdown col-md-7">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="usagetype" data-toggle="dropdown" aria-expanded="true">
-                                            Please Choose
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="usagetype">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">load-profile-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alarm-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">display-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">event-usage</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">midnight-registerdata-usage</a>
-                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">alternative-display-usage</a>
-                                        </ul>
+                                    <label for="usagetype2" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
+                                    <div class="col-md-7">
+                                        <select name="usagetype2">
+                                            <option value="load-profile-usage" selected>load-profile-usage</option>
+                                            <option value="alarm-usage">alarm-usage</option>
+                                            <option value="display-usage">display-usage</option>
+                                            <option value="event-usage">event-usage</option>
+                                            <option value="midnight-registerdata-usage">midnight-registerdata-usage</option>
+                                            <option value="alternative-display-usage">alternative-display-usage</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid6" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid6" class="form-control" id="meterid6" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="value" class="col-md-offset-1 col-md-4 control-label">Value</label>
+                                    <label for="value1" class="col-md-offset-1 col-md-4 control-label">Value</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="value">
+                                        <input type="text" name="value1" class="form-control" id="value1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -524,20 +485,20 @@
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid7" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid7" class="form-control" id="meterid7" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="tou" class="col-md-offset-1 col-md-4 control-label">Tou</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="tou">
+                                        <input type="text" name="tou" class="form-control" id="tou" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -575,26 +536,26 @@
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid8" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid8" class="form-control" id="meterid8" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="key" class="col-md-offset-1 col-md-4 control-label">Key</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="key">
+                                        <input type="text" name="key" class="form-control" id="key" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="value" class="col-md-offset-1 col-md-4 control-label">Value</label>
+                                    <label for="value2" class="col-md-offset-1 col-md-4 control-label">Value</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="value">
+                                        <input type="text" name="value2" class="form-control" id="value2" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -632,20 +593,20 @@
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid9" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid9" class="form-control" id="meterid9" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwd" class="col-md-offset-1 col-md-4 control-label">Password</label>
+                                    <label for="pwd2" class="col-md-offset-1 col-md-4 control-label">Password</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="pwd">
+                                        <input type="text" name="pwd2" class="form-control" id="pwd2" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -678,25 +639,25 @@
                         </div>
                     </div>
                     <!-- start of update program -->
-                    <div role="tabpanel" class="tab-pane" id="program">
+                    <div role="tabpanel" class="tab-pane" id="updateprogram">
                         <!-- start of update program request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid10" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid10" class="form-control" id="meterid10" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="uri" class="col-md-offset-1 col-md-4 control-label">URI</label>
+                                    <label for="uri1" class="col-md-offset-1 col-md-4 control-label">URI</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="uri">
+                                        <input type="text" name="uri1" class="form-control" id="uri1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -729,25 +690,25 @@
                         </div>
                     </div>
                     <!-- start of update firmware -->
-                    <div role="tabpanel" class="tab-pane" id="firmware">
+                    <div role="tabpanel" class="tab-pane" id="updatefirmware">
                         <!-- start of update firmware request -->
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid11" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid11" class="form-control" id="meterid11" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="uri" class="col-md-offset-1 col-md-4 control-label">URI</label>
+                                    <label for="uri2" class="col-md-offset-1 col-md-4 control-label">URI</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="uri">
+                                        <input type="text" name="uri2" class="form-control" id="uri2" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -785,20 +746,20 @@
                         <div class="col-md-5">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="meterid12" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="meterid" placeholder="20-digit">
+                                        <input type="text" name="meterid12" class="form-control" id="meterid12" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="message" class="col-md-offset-1 col-md-4 control-label">Message</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="message">
+                                        <input type="text" name="message" class="form-control" id="message" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="submit" class="btn btn-default" value="Submit">
                                     </div>
                                 </div>
                             </form>
