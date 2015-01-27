@@ -118,8 +118,8 @@
                                 <div class="form-group">
                                     <label for="actiontype" class="col-md-offset-1 col-md-4 control-label">Action Type</label>
                                     <div class="col-md-7">
-                                        <select name="actiontype">
-                                            <option value="time-sync" selected>time-sync</option>
+                                        <select name="actiontype" id="actiontype">
+                                            <option value="time-sync">time-sync</option>
                                             <option value="demand-reset">demand-reset</option>
                                             <option value="activate">activate</option>
                                             <option value="deactivate">deactivate</option>
@@ -140,7 +140,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="actionsubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -180,8 +180,8 @@
                                 <div class="form-group">
                                     <label for="capabilitytype" class="col-md-offset-1 col-md-4 control-label">Capability Type</label>
                                     <div class="col-md-7">
-                                        <select name="capabilitytype">
-                                            <option value="load-profile-capability" selected>load-profile-capability</option>
+                                        <select name="capabilitytype" id="capabilitytype">
+                                            <option value="load-profile-capability">load-profile-capability</option>
                                             <option value="alarm-capability">alarm-capability</option>
                                             <option value="display-capability">display-capability</option>
                                             <option value="event-capability">event-capability</option>
@@ -199,7 +199,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="capabilitysubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -237,10 +237,10 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="usagetype1" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
+                                    <label for="getusagetype" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
                                     <div class="col-md-7">
-                                        <select name="usagetype1">
-                                            <option value="load-profile-usage" selected>load-profile-usage</option>
+                                        <select name="getusagetype" id="getusagetype">
+                                            <option value="load-profile-usage">load-profile-usage</option>
                                             <option value="alarm-usage">alarm-usage</option>
                                             <option value="display-usage">display-usage</option>
                                             <option value="event-usage">event-usage</option>
@@ -258,7 +258,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="getusagesubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -298,8 +298,8 @@
                                 <div class="form-group">
                                     <label for="datatype" class="col-md-offset-1 col-md-4 control-label">Data Type</label>
                                     <div class="col-md-7">
-                                        <select name="datatype">
-                                            <option value="load-profile" selected>load-profile</option>
+                                        <select name="datatype" id="datatype">
+                                            <option value="load-profile">load-profile</option>
                                             <option value="midnight-registerdata">midnight-registerdata</option>
                                             <option value="event-log">event-log</option>
                                             <option value="alarm-log">alarm-log</option>
@@ -332,7 +332,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="historysubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -383,7 +383,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="instantsubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -421,10 +421,10 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="usagetype2" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
+                                    <label for="setusagetype" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
                                     <div class="col-md-7">
-                                        <select name="usagetype2">
-                                            <option value="load-profile-usage" selected>load-profile-usage</option>
+                                        <select name="setusagetype" id="setusagetype">
+                                            <option value="load-profile-usage">load-profile-usage</option>
                                             <option value="alarm-usage">alarm-usage</option>
                                             <option value="display-usage">display-usage</option>
                                             <option value="event-usage">event-usage</option>
@@ -447,7 +447,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="setusagesubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -498,7 +498,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="tousubmit"class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -555,7 +555,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="setregistersubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -606,7 +606,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="setpwdsubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -657,7 +657,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="updateprogramsubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -708,7 +708,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="updatefirmwaresubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -759,7 +759,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-5 col-md-4">
-                                        <input type="submit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="sendihdsubmit" class="btn btn-success" value="Submit">
                                     </div>
                                 </div>
                             </form>
@@ -834,7 +834,7 @@
                             </div>
                         </div>
                         <div>
-                            <input type="submit" class="btn btn-primary col-sm-offset-5" value="Submit">
+                            <input type="submit" id="contactussubmit" class="btn btn-primary col-sm-offset-5" value="Submit">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </form>
@@ -847,7 +847,7 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/meter.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!--<script>
     (function(b, o, i, l, e, r) {
