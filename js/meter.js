@@ -71,6 +71,18 @@ $(document).ready(function(){
         "\nEmail: " + $("#contactEmail").val() +
         "\nMessage: " + $("#contactMessage").val());
   });
+
+  $('.pills a').click(function() {
+        var $this = $(this);
+        var $bc = $('<li></li>');
+
+        $this.parents('li').each(function(n, li) {
+            var $a = $(li).children('a').clone().prepend(' / ');
+            $bc.prepend($a);
+        });
+        $('.breadcrumb').html($bc.prepend('<a href="index.html">Headend / </a><a href="meter.html">Meter Service </a>'));
+        
+    });
   
 });
 
