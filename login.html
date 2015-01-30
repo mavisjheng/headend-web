@@ -27,50 +27,48 @@
             <button class="btn btn-primary btn-block font-24" type="submit">Log in</button>
         </form>
     </div>
-    <!-- end of login form -->
 
     <!-- start of the footer -->
     <footer class="font-agency">
         <div class="navbar navbar-default navbar-fixed-bottom site-footer">
             <div class="container">
                 <p class="navbar-text pull-left" style="color: #000000">&copy; 2015 <a href="http://www.acbel.com/About_AcBel.aspx" target="_blank" style="color: #000000">AcBel Polytech Inc.</a> Designed By Er-Jhen Jheng</p>
-                <a href="" class="navbar-text pull-right" data-toggle="modal" data-target="#contactus" style="color: #000000">Contact Us</a>
+                <a href="" class="navbar-text pull-right" data-toggle="modal" data-target="#contact-form" style="color: #000000">Contact Us</a>
             </div>
         </div>
     </footer>
-    <!-- end of the footer -->
 
-    <!-- start of Contact Us Modal -->
-    <div class="modal fade" id="contactus">
+    <!-- start of Contact Us Form Modal -->
+    <div class="modal fade" id="contact-form">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
-                    <h4 class="modal-title" id="contactUsModalLabel">Contact AcBel</h4>
+                    <h4 class="modal-title">Contact AcBel</h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label for="contactName" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
+                            <label for="contact-name" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
                             <div class="col-sm-7">
-                                <input type="text" name="contactName" class="form-control" id="contactName" placeholder="Your Name" required>
+                                <input type="text" name="contact-name" class="form-control" id="contact-name" placeholder="Your Name" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contactEmail" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
+                            <label for="contact-email" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
                             <div class="col-sm-7">
-                                <input type="email" name="contactEmail" class="form-control" id="contactEmail" placeholder="you@example.com" required>
+                                <input type="email" name="contact-email" class="form-control" id="contact-email" placeholder="you@example.com" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contactMessage" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
+                            <label for="contact-message" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
                             <div class="col-sm-7">
-                                <textarea type="text" name="contactMessage" class="form-control" rows="7" id="contactMessage" placeholder="Your Message here" required></textarea>
+                                <textarea type="text" name="contact-message" class="form-control" rows="7" id="contact-message" placeholder="Your Message here" required></textarea>
                             </div>
                         </div>
                         <div>
-                            <input type="submit" id="contactussubmit" class="btn btn-primary col-sm-offset-5" value="Submit">
+                            <input type="submit" id="contact-submit" class="btn btn-primary col-sm-offset-5" value="Submit">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </form>

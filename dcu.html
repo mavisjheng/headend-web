@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="dcu.html">Dcu Service</a>
                             </li>
@@ -43,16 +43,16 @@
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">More <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="about.html">About AcBel</a>
                             </li>
-                            <li><a href="" data-toggle="modal" data-target="#contactus">Contact Us</a>
+                            <li><a href="#" data-toggle="modal" data-target="#contact-form">Contact Us</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
-                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="login.html" class="navbar-link">Log Out</a>
+                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="login.html" class="navbar-link">Log Out <span class="glyphicon glyphicon-log-out"></a>
                 </p>
             </div>
         </div>
@@ -61,49 +61,49 @@
     <!-- start of content -->
     <div class="container-fluid">
         <div class="row">
-            <!-- start of left content: service list tabs -->
-            <div class="col-md-2 pills">
+            <!-- start of left: service list pills -->
+            <div class="col-md-2 service-pills">
                 <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" class="active"><a href="#description" data-toggle="tab">Service Description</a>
+                    <li role="presentation" class="active"><a href="#service-description" data-toggle="tab">Service Description</a>
                     </li>
-                    <li role="presentation"><a href="#dcuaction" data-toggle="tab">Dcu Action</a>
+                    <li role="presentation"><a href="#dcu-action" data-toggle="tab">Dcu Action</a>
                     </li>
-                    <li role="presentation"><a href="#getcapability" data-toggle="tab">Get Capability</a>
+                    <li role="presentation"><a href="#get-capability" data-toggle="tab">Get Capability</a>
                     </li>
-                    <li role="presentation"><a href="#getusage" data-toggle="tab">Get Usage</a>
+                    <li role="presentation"><a href="#get-usage" data-toggle="tab">Get Usage</a>
                     </li>
-                    <li role="presentation"><a href="#gethistory" data-toggle="tab">Get Historic Data</a>
+                    <li role="presentation"><a href="#get-history" data-toggle="tab">Get Historic Data</a>
                     </li>
-                    <li role="presentation"><a href="#getlog" data-toggle="tab">Get Dcu Log</a>
+                    <li role="presentation"><a href="#get-log" data-toggle="tab">Get Dcu Log</a>
                     </li>
                 </ul>
             </div>
-            <!-- start of right content: breadcrumb and services content -->
+            <!-- start of right: breadcrumb and service content -->
             <div class="col-md-10">
                 <!-- start of breadcrumb -->
                 <div class="breadcrumb">
                     <li>
                         <a href="index.html">Headend / </a>
                         <a href="dcu.html">Dcu Service / </a>
-                        <a href="#description">Service Description </a>
+                        <a href="">Service Description </a>
                     </li>
                 </div>
-                <!-- start of services content -->
+                <!-- start of service content -->
                 <div class="tab-content">
                     <!-- start of service description -->
-                    <div class="tab-pane active" id="description">
+                    <div class="tab-pane active" id="service-description">
                         <p>Service Description is the first page of Dcu Service.</p>
                         <p>This page tells how the functions work, and maybe screenshots, step by step instruction.</p>
                     </div>
                     <!-- start of dcu action -->
-                    <div class="tab-pane" id="dcuaction">
+                    <div class="tab-pane" id="dcu-action">
                         <!-- start of dcu action request -->
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="actiontype" class="col-md-offset-1 col-md-4 control-label">Action Type</label>
+                                    <label for="action-type" class="col-md-offset-1 col-md-4 control-label">Action Type</label>
                                     <div class="col-md-7">
-                                        <select name="actiontype" id="actiontype">
+                                        <select name="action-type" id="action-type">
                                             <option value="re-registration">re-registration</option>
                                             <option value="activate">activate</option>
                                             <option value="deactivate">deactivate</option>
@@ -112,26 +112,26 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="dcuid1" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
+                                    <label for="dcuaction-dcuid" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="dcuid1" class="form-control" id="dcuid1" placeholder="12-digit" required>
+                                        <input type="text" name="dcuaction-dcuid" class="form-control" id="dcuaction-dcuid" placeholder="12-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="sessionkey" class="col-md-5 control-label">Session Key Seed</label>
+                                    <label for="session-key" class="col-md-5 control-label">Session Key Seed</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="sessionkey" class="form-control" id="sessionkey" required>
+                                        <input type="text" name="session-key" class="form-control" id="session-key" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="masterkey" class="col-md-offset-1 col-md-4 control-label">Master Key</label>
+                                    <label for="master-key" class="col-md-offset-1 col-md-4 control-label">Master Key</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="masterkey" class="form-control" id="masterkey" required>
+                                        <input type="text" name="master-key" class="form-control" id="master-key" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="actionsubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="dcuaction-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -141,38 +141,38 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="dcuaction-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="dcuaction-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="dcuaction-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <label for="dcuaction-taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="taskuid">
+                                        <input type="text" class="form-control" id="dcuaction-taskuid">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="dcuaction-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="dcuaction-result"></textarea>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <!-- start of get capability -->
-                    <div class="tab-pane" id="getcapability">
+                    <div class="tab-pane" id="get-capability">
                         <!-- start of get capability request -->
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="capabilitytype" class="col-md-offset-1 col-md-4 control-label">Capability Type</label>
+                                    <label for="capability-type" class="col-md-offset-1 col-md-4 control-label">Capability Type</label>
                                     <div class="col-md-7">
-                                        <select name="capabilitytype" id="capabilitytype">
+                                        <select name="capability-type" id="capability-type">
                                             <option value="load-profile-capability">load-profile-capability</option>
                                             <option value="alarm-capability">alarm-capability</option>
                                             <option value="display-capability">display-capability</option>
@@ -183,14 +183,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid1" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="getcapability-meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="meterid1" class="form-control" id="meterid1" placeholder="20-digit" required>
+                                        <input type="text" name="getcapability-meterid" class="form-control" id="getcapability-meterid" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="capabilitysubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="getcapability-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -200,38 +200,38 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="getcapability-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="getcapability-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="getcapability-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <label for="getcapability-taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="taskuid">
+                                        <input type="text" class="form-control" id="getcapability-taskuid">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="getcapability-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="getcapability-result"></textarea>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <!-- start of get usage -->
-                    <div class="tab-pane" id="getusage">
+                    <div class="tab-pane" id="get-usage">
                         <!-- start of get usage request -->
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="usagetype" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
+                                    <label for="usage-type" class="col-md-offset-1 col-md-4 control-label">Usage Type</label>
                                     <div class="col-md-7">
-                                        <select name="usagetype" id="usagetype">
+                                        <select name="usage-type" id="usage-type">
                                             <option value="load-profile-usage">load-profile-usage</option>
                                             <option value="alarm-usage">alarm-usage</option>
                                             <option value="display-usage">display-usage</option>
@@ -242,14 +242,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid2" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="getusage-meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="meterid2" class="form-control" id="meterid2" placeholder="20-digit" required>
+                                        <input type="text" name="getusage-meterid" class="form-control" id="getusage-meterid" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="usagesubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="getusage-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -259,38 +259,38 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="getusage-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="getusage-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="getusage-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <label for="getusage-taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="taskuid">
+                                        <input type="text" class="form-control" id="getusage-taskuid">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="getusage-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="getusage-result"></textarea>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <!-- start of get historic data -->
-                    <div class="tab-pane" id="gethistory">
+                    <div class="tab-pane" id="get-history">
                         <!-- start of get historic data request -->
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="datatype" class="col-md-offset-1 col-md-4 control-label">Data Type</label>
+                                    <label for="data-type" class="col-md-offset-1 col-md-4 control-label">Data Type</label>
                                     <div class="col-md-7">
-                                        <select name="datatype" id="datatype">
+                                        <select name="data-type" id="data-type">
                                             <option value="load-profile">load-profile</option>
                                             <option value="midnight-registerdata">midnight-registerdata</option>
                                             <option value="event-log">event-log</option>
@@ -299,38 +299,38 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="dcuid2" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
+                                    <label for="gethistory-dcuid" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="dcuid2" class="form-control" id="dcuid2" placeholder="12-digit" required>
+                                        <input type="text" name="gethistory-dcuid" class="form-control" id="gethistory-dcuid" placeholder="12-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="meterid3" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="gethistory-meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="meterid3" class="form-control" id="meterid3" placeholder="20-digit" required>
+                                        <input type="text" name="gethistory-meterid" class="form-control" id="gethistory-meterid" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="item" class="col-md-offset-1 col-md-4 control-label">Item</label>
+                                    <label for="gethistory-item" class="col-md-offset-1 col-md-4 control-label">Item</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="item" required>
+                                        <input type="text" class="form-control" id="gethistory-item" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="starttime1" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
+                                    <label for="gethistory-starttime" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" name="starttime1" class="form-control" id="starttime1" required>
+                                        <input type="datetime-local" name="gethistory-starttime" class="form-control" id="gethistory-starttime" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="endtime1" class="col-md-offset-1 col-md-4 control-label">End Time</label>
+                                    <label for="gethistory-endtime" class="col-md-offset-1 col-md-4 control-label">End Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" name="endtime1" class="form-control" id="endtime1" required>
+                                        <input type="datetime-local" name="gethistory-endtime" class="form-control" id="gethistory-endtime" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="historysubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="gethistory-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -340,55 +340,55 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="gethistory-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="gethistory-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="gethistory-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <label for="gethistory-taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="taskuid">
+                                        <input type="text" class="form-control" id="gethistory-taskuid">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="gethistory-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="gethistory-result"></textarea>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <!-- start of get dcu log -->
-                    <div class="tab-pane" id="getlog">
+                    <div class="tab-pane" id="get-log">
                         <!-- start of get dcu log request -->
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="dcuid3" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
+                                    <label for="getlog-dcuid" class="col-md-offset-1 col-md-4 control-label">Dcu ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="dcuid3" class="form-control" id="dcuid3" placeholder="12-digit" required>
+                                        <input type="text" name="getlog-dcuid" class="form-control" id="getlog-dcuid" placeholder="12-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="starttime2" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
+                                    <label for="getlog-starttime" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" name="starttime2" class="form-control" id="starttime2" required>
+                                        <input type="datetime-local" name="getlog-starttime" class="form-control" id="getlog-starttime" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="endtime2" class="col-md-offset-1 col-md-4 control-label">End Time</label>
+                                    <label for="getlog-endtime" class="col-md-offset-1 col-md-4 control-label">End Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" name="endtime2" class="form-control" id="endtime2" required>
+                                        <input type="datetime-local" name="getlog-endtime" class="form-control" id="getlog-endtime" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="logsubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="getlog-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -398,24 +398,24 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="getlog-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="getlog-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="getlog-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <label for="getlog-taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="taskuid">
+                                        <input type="text" class="form-control" id="getlog-taskuid">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="getlog-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="getlog-result"></textarea>
                                     </div>
                                 </div>
                             </form>
@@ -434,37 +434,37 @@
         </div>
     </div>
 
-    <!-- start of Contact Us Modal -->
-    <div class="modal fade" id="contactus">
+    <!-- start of Contact Us Form Modal -->
+    <div class="modal fade" id="contact-form">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
-                    <h4 class="modal-title" id="contactUsModalLabel">Contact AcBel</h4>
+                    <h4 class="modal-title">Contact AcBel</h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label for="contactName" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
+                            <label for="contact-name" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
                             <div class="col-sm-7">
-                                <input type="text" name="contactName" class="form-control" id="contactName" placeholder="Your Name" required>
+                                <input type="text" name="contact-name" class="form-control" id="contact-name" placeholder="Your Name" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contactEmail" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
+                            <label for="contact-email" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
                             <div class="col-sm-7">
-                                <input type="email" name="contactEmail" class="form-control" id="contactEmail" placeholder="you@example.com" required>
+                                <input type="email" name="contact-email" class="form-control" id="contact-email" placeholder="you@example.com" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contactMessage" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
+                            <label for="contact-message" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
                             <div class="col-sm-7">
-                                <textarea type="text" name="contactMessage" class="form-control" rows="7" id="contactMessage" placeholder="Your Message here" required></textarea>
+                                <textarea type="text" name="contact-message" class="form-control" rows="7" id="contact-message" placeholder="Your Message here" required></textarea>
                             </div>
                         </div>
                         <div>
-                            <input type="submit" id="contactussubmit" class="btn btn-primary col-sm-offset-5" value="Submit">
+                            <input type="submit" id="contact-submit" class="btn btn-primary col-sm-offset-5" value="Submit">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </form>

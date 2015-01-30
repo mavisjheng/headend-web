@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  $("#contactussubmit").click(function(){
-    alert("Name: " + $("#contactName").val() + 
-        "\nEmail: " + $("#contactEmail").val() +
-        "\nMessage: " + $("#contactMessage").val());
+  $("#contact-submit").click(function(){
+    alert("Name: " + $("#contact-name").val() + 
+        "\nEmail: " + $("#contact-email").val() +
+        "\nMessage: " + $("#contact-message").val());
   });
 
 });

@@ -1,78 +1,78 @@
 $(document).ready(function(){
-  $("#actionsubmit").click(function(){
-    alert("Action Type: " + $("#actiontype :selected").val() +
-    	  "\nMeter ID: " + $("#meterid1").val() + 
-    	  "\nPassword: " + $("#pwd1").val());
+  $("#meteraction-submit").click(function(){
+    alert("Action Type: " + $("#action-type :selected").val() +
+    	  "\nMeter ID: " + $("#meteraction-meterid").val() + 
+    	  "\nPassword: " + $("#meteraction-pwd").val());
   });
 
-  $("#capabilitysubmit").click(function(){
-    alert("Capability Type: " + $("#capabilitytype :selected").val() +
-    	  "\nMeter ID: " + $("#meterid2").val());
+  $("#getcapability-submit").click(function(){
+    alert("Capability Type: " + $("#capability-type :selected").val() +
+    	  "\nMeter ID: " + $("#getcapability-meterid").val());
   });
 
-  $("#getusagesubmit").click(function(){
-    alert("Usage Type: " + $("#getusagetype :selected").val() +
-    	  "\nMeter ID: " + $("#meterid3").val());
+  $("#getusage-submit").click(function(){
+    alert("Usage Type: " + $("#getusage-type :selected").val() +
+    	  "\nMeter ID: " + $("#getusage-meterid").val());
   });
 
-  $("#historysubmit").click(function(){
-    alert("Data Type: " + $("#datatype :selected").val() +
-    	  "\nMeter ID: " + $("#meterid4").val() + 
-    	  "\nItem: " + $("#item1").val() + 
-    	  "\nStart Time: " + $("#starttime1").val() +
-    	  "\nEnd Time: " + $("#endtime1").val());
+  $("#gethistory-submit").click(function(){
+    alert("Data Type: " + $("#data-type :selected").val() +
+    	  "\nMeter ID: " + $("#gethistory-meterid").val() + 
+    	  "\nItem: " + $("#gethistory-item").val() + 
+    	  "\nStart Time: " + $("#gethistory-starttime").val() +
+    	  "\nEnd Time: " + $("#gethistory-endtime").val());
   });
 
-  $("#instantsubmit").click(function(){
-    alert("Meter ID: " + $("#meterid5").val() + 
-        "\nItem: " + $("#item2").val());
+  $("#getinstant-submit").click(function(){
+    alert("Meter ID: " + $("#getinstant-meterid").val() + 
+        "\nItem: " + $("#getinstant-item").val());
   });
 
-  $("#setusagesubmit").click(function(){
-    alert("Usage Type: " + $("#setusagetype :selected").val() +
-        "\nMeter ID: " + $("#meterid6").val() +
-        "\nValue: " + $("#value1").val());
+  $("#setusage-submit").click(function(){
+    alert("Usage Type: " + $("#setusage-type :selected").val() +
+        "\nMeter ID: " + $("#setusage-meterid").val() +
+        "\nValue: " + $("#setusage-value").val());
 
   });
 
-  $("#tousubmit").click(function(){
-    alert("Meter ID: " + $("#meterid7").val() + 
-        "\nTou: " + $("#tou").val());
+  $("#settou-submit").click(function(){
+    alert("Meter ID: " + $("#settou-meterid").val() + 
+        "\nTou: " + $("#settou-tou").val());
   });
 
-  $("#setregistersubmit").click(function(){
-    alert("Meter ID: " + $("#meterid8").val() +
-        "\nKey: " + $("#key").val() +
-        "\nValue: " + $("#value2").val());
+  $("#setregister-submit").click(function(){
+    alert("Meter ID: " + $("#setregister-meterid").val() +
+        "\nKey: " + $("#setregister-key").val() +
+        "\nValue: " + $("#setregister-value").val());
   });
 
-  $("#setpwdsubmit").click(function(){
-    alert("Meter ID: " + $("#meterid9").val() + 
-        "\nPassword: " + $("#pwd2").val());
+  $("#setpwd-submit").click(function(){
+    alert("Meter ID: " + $("#setpwd-meterid").val() + 
+        "\nPassword: " + $("#setpwd-pwd").val());
   });
 
-  $("#updateprogramsubmit").click(function(){
-    alert("Meter ID: " + $("#meterid10").val() + 
-        "\nURI: " + $("#uri1").val());
+  $("#updateprogram-submit").click(function(){
+    alert("Meter ID: " + $("#updateprogram-meterid").val() + 
+        "\nURL: " + $("#updateprogram-url").val());
   });
 
-  $("#updatefirmwaresubmit").click(function(){
-    alert("Meter ID: " + $("#meterid11").val() + 
-        "\nURI: " + $("#uri2").val());
+  $("#updatefirmware-submit").click(function(){
+    alert("Meter ID: " + $("#updatefirmware-meterid").val() + 
+        "\nURL: " + $("#updatefirmware-url").val());
   });
 
-  $("#sendihdsubmit").click(function(){
-    alert("Meter ID: " + $("#meterid12").val() + 
-        "\nMessage: " + $("#message").val());
+  $("#sendihd-submit").click(function(){
+    alert("Meter ID: " + $("#sendihd-meterid").val() + 
+        "\nMessage: " + $("#sendihd-message").val());
   });
 
-  $("#contactussubmit").click(function(){
-    alert("Name: " + $("#contactName").val() + 
-        "\nEmail: " + $("#contactEmail").val() +
-        "\nMessage: " + $("#contactMessage").val());
+  $("#contact-submit").click(function(){
+    alert("Name: " + $("#contact-name").val() + 
+        "\nEmail: " + $("#contact-email").val() +
+        "\nMessage: " + $("#contact-message").val());
   });
 
-  $('.pills a').click(function() {
+  $('.service-pills a').click(function() {
         var $this = $(this);
         var $bc = $('<li></li>');
 

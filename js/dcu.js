@@ -1,43 +1,43 @@
 $(document).ready(function() {
-    $("#actionsubmit").click(function() {
-        alert("Action Type: " + $("#actiontype :selected").val() +
-            "\nDcu ID: " + $("#dcuid1").val() +
-            "\nSession Key Seed: " + $("#sessionkey").val() +
-            "\nMaster Key: " + $("#masterkey").val());
+    $("#dcuaction-submit").click(function() {
+        alert("Action Type: " + $("#action-type :selected").val() +
+            "\nDcu ID: " + $("#dcuaction-dcuid").val() +
+            "\nSession Key Seed: " + $("#session-key").val() +
+            "\nMaster Key: " + $("#master-key").val());
     });
 
-    $("#capabilitysubmit").click(function() {
-        alert("Capability Type: " + $("#capabilitytype :selected").val() +
-            "\nMeter ID: " + $("#meterid1").val());
+    $("#getcapability-submit").click(function() {
+        alert("Capability Type: " + $("#capability-type :selected").val() +
+            "\nMeter ID: " + $("#getcapability-meterid").val());
     });
 
-    $("#usagesubmit").click(function() {
-        alert("Usage Type: " + $("#usagetype :selected").val() +
-            "\nMeter ID: " + $("#meterid2").val());
+    $("#getusage-submit").click(function() {
+        alert("Usage Type: " + $("#usage-type :selected").val() +
+            "\nMeter ID: " + $("#getusage-meterid").val());
     });
 
-    $("#historysubmit").click(function() {
-        alert("Data Type: " + $("#datatype :selected").val() +
-            "\nDcu ID: " + $("#dcuid2").val() +
-            "\nMeter ID: " + $("#meterid3").val() +
-            "\nItem: " + $("#item").val() +
-            "\nStart Time: " + $("#starttime1").val() +
-            "\nEnd Time: " + $("#endtime1").val());
+    $("#gethistory-submit").click(function() {
+        alert("Data Type: " + $("#data-type :selected").val() +
+            "\nDcu ID: " + $("#gethistory-dcuid").val() +
+            "\nMeter ID: " + $("#gethistory-meterid").val() +
+            "\nItem: " + $("#gethistory-item").val() +
+            "\nStart Time: " + $("#gethistory-starttime").val() +
+            "\nEnd Time: " + $("#gethistory-endtime").val());
     });
 
-    $("#logsubmit").click(function() {
-        alert("Dcu ID: " + $("#dcuid3").val() +
-            "\nStart Time: " + $("#starttime2").val() +
-            "\nEnd Time: " + $("#endtime2").val());
+    $("#getlog-submit").click(function() {
+        alert("Dcu ID: " + $("#getlog-dcuid").val() +
+            "\nStart Time: " + $("#getlog-starttime").val() +
+            "\nEnd Time: " + $("#getlog-endtime").val());
     });
 
-    $("#contactussubmit").click(function() {
-        alert("Name: " + $("#contactName").val() +
-            "\nEmail: " + $("#contactEmail").val() +
-            "\nMessage: " + $("#contactMessage").val());
+    $("#contact-submit").click(function(){
+        alert("Name: " + $("#contact-name").val() + 
+            "\nEmail: " + $("#contact-email").val() +
+            "\nMessage: " + $("#contact-message").val());
     });
 
-    $('.pills a').click(function() {
+    $('.service-pills a').click(function() {
         var $this = $(this);
         var $bc = $('<li></li>');
 

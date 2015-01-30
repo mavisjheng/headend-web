@@ -47,12 +47,12 @@
                         <ul class="dropdown-menu">
                             <li><a href="about.html">About AcBel</a>
                             </li>
-                            <li><a href="" data-toggle="modal" data-target="#contactus">Contact Us</a>
+                            <li><a href="#" data-toggle="modal" data-target="#contact-form">Contact Us</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
-                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="login.html" class="navbar-link">Log Out</a>
+                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="login.html" class="navbar-link">Log Out <span class="glyphicon glyphicon-log-out"></a>
                 </p>
             </div>
         </div>
@@ -61,10 +61,10 @@
     <!-- start of content -->
     <div class="container-fluid">
         <div class="row">
-            <!-- start of left content: service list tabs -->
-            <div class="col-md-2 pills">
+            <!-- start of left: service list pills -->
+            <div class="col-md-2 service-pills">
                 <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" class="active"><a href="#description" data-toggle="tab">Service Description</a>
+                    <li role="presentation" class="active"><a href="#service-description" data-toggle="tab">Service Description</a>
                     </li>
                     <li role="presentation"><a href="#register" data-toggle="tab">Register User</a>
                     </li>
@@ -76,20 +76,20 @@
                     </li>
                 </ul>
             </div>
-            <!-- start of right content: breadcrumb and services content -->
+             <!-- start of right: breadcrumb and service content -->
             <div class="col-md-10">
                 <!-- start of breadcrumb -->
                 <div class="breadcrumb">
                     <li>
                         <a href="index.html">Headend / </a>
                         <a href="notification.html">Notification Service / </a>
-                        <a href="#description">Service Description </a>
+                        <a href="">Service Description </a>
                     </li>
                 </div>
                 <!-- start of services content -->
                 <div class="tab-content">
                     <!-- start of service description -->
-                    <div class="tab-pane active" id="description">
+                    <div class="tab-pane active" id="service-description">
                         <p>Service Description is the first page of Notification Service.</p>
                         <p>This page tells how the functions work, and maybe screenshots, step by step instruction.</p>
                     </div>
@@ -99,32 +99,32 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="username" class="col-md-offset-1 col-md-4 control-label">User Name</label>
+                                    <label for="register-username" class="col-md-offset-1 col-md-4 control-label">User Name</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="username" class="form-control" id="username" required>
+                                        <input type="text" name="register-username" class="form-control" id="register-username" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="protocol" class="col-md-offset-1 col-md-4 control-label">Protocol</label>
+                                    <label for="register-protocol" class="col-md-offset-1 col-md-4 control-label">Protocol</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="protocol" class="form-control" id="protocol" required>
+                                        <input type="text" name="register-protocol" class="form-control" id="register-protocol" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="contenttype" class="col-md-offset-1 col-md-4 control-label">Content Type</label>
+                                    <label for="register-contenttype" class="col-md-offset-1 col-md-4 control-label">Content Type</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="contenttype" class="form-control" id="contenttype" required>
+                                        <input type="text" name="register-contenttype" class="form-control" id="register-contenttype" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="address" class="col-md-offset-1 col-md-4 control-label">Address</label>
+                                    <label for="register-address" class="col-md-offset-1 col-md-4 control-label">Address</label>
                                     <div class="col-md-7">
-                                        <input type="url" name="address" class="form-control" id="address" required>
+                                        <input type="url" name="register-address" class="form-control" id="register-address" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="registersubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="register-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -134,24 +134,24 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="register-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="register-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="register-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="userid" class="col-md-offset-1 col-md-4 control-label">User ID</label>
+                                    <label for="register-userid" class="col-md-offset-1 col-md-4 control-label">User ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="userid">
+                                        <input type="text" class="form-control" id="register-userid">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="register-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="register-result"></textarea>
                                     </div>
                                 </div>
                             </form>
@@ -163,14 +163,14 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="userid1" class="col-md-offset-1 col-md-4 control-label">User ID</label>
+                                    <label for="unregister-userid" class="col-md-offset-1 col-md-4 control-label">User ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="userid1" class="form-control" id="userid1" required>
+                                        <input type="text" name="unregister-userid" class="form-control" id="unregister-userid" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="unregistersubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="unregister-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -180,18 +180,18 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="unregister-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="unregister-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="unregister-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="unregister-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="unregister-result"></textarea>
                                     </div>
                                 </div>
                             </form>
@@ -203,20 +203,20 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="userid2" class="col-md-offset-1 col-md-4 control-label">User ID</label>
+                                    <label for="subscribe-userid" class="col-md-offset-1 col-md-4 control-label">User ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="userid2" class="form-control" id="userid2" required>
+                                        <input type="text" name="subscribe-userid" class="form-control" id="subscribe-userid" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="notificationtype1" class="col-md-5 control-label">Notification Type</label>
+                                    <label for="subscribe-notificationtype" class="col-md-5 control-label">Notification Type</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="notificationtype1" class="form-control" id="notificationtype1" required>
+                                        <input type="text" name="subscribe-notificationtype" class="form-control" id="subscribe-notificationtype" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="subscribesubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="subscribe-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -226,18 +226,18 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="subscribe-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="subscribe-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="subscribe-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="subscribe-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="subscribe-result"></textarea>
                                     </div>
                                 </div>
                             </form>
@@ -249,20 +249,20 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="userid3" class="col-md-offset-1 col-md-4 control-label">User ID</label>
+                                    <label for="unsubscribe-userid" class="col-md-offset-1 col-md-4 control-label">User ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="userid3" class="form-control" id="userid3" required>
+                                        <input type="text" name="unsubscribe-userid" class="form-control" id="unsubscribe-userid" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="notificationtype2" class="col-md-5 control-label">Notification Type</label>
+                                    <label for="unsubscribe-notificationtype" class="col-md-5 control-label">Notification Type</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="notificationtype2" class="form-control" id="notificationtype2" required>
+                                        <input type="text" name="unsubscribe-notificationtype" class="form-control" id="unsubscribe-notificationtype" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="unsubscribesubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="unsubscribe-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -272,18 +272,18 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="unsubscribe-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="unsubscribe-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="unsubscribe-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="unsubscribe-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="unsubscribe-result"></textarea>
                                     </div>
                                 </div>
                             </form>
@@ -302,37 +302,37 @@
         </div>
     </div>
 
-    <!-- start of Contact Us Modal -->
-    <div class="modal fade" id="contactus">
+    <!-- start of Contact Us Form Modal -->
+    <div class="modal fade" id="contact-form">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
-                    <h4 class="modal-title" id="contactUsModalLabel">Contact AcBel</h4>
+                    <h4 class="modal-title">Contact AcBel</h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label for="contactName" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
+                            <label for="contact-name" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
                             <div class="col-sm-7">
-                                <input type="text" name="contactName" class="form-control" id="contactName" placeholder="Your Name" required>
+                                <input type="text" name="contact-name" class="form-control" id="contact-name" placeholder="Your Name" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contactEmail" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
+                            <label for="contact-email" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
                             <div class="col-sm-7">
-                                <input type="email" name="contactEmail" class="form-control" id="contactEmail" placeholder="you@example.com" required>
+                                <input type="email" name="contact-email" class="form-control" id="contact-email" placeholder="you@example.com" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contactMessage" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
+                            <label for="contact-message" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
                             <div class="col-sm-7">
-                                <textarea type="text" name="contactMessage" class="form-control" rows="7" id="contactMessage" placeholder="Your Message here" required></textarea>
+                                <textarea type="text" name="contact-message" class="form-control" rows="7" id="contact-message" placeholder="Your Message here" required></textarea>
                             </div>
                         </div>
                         <div>
-                            <input type="submit" id="contactussubmit" class="btn btn-primary col-sm-offset-5" value="Submit">
+                            <input type="submit" id="contact-submit" class="btn btn-primary col-sm-offset-5" value="Submit">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </form>

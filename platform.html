@@ -47,12 +47,12 @@
                         <ul class="dropdown-menu">
                             <li><a href="about.html">About AcBel</a>
                             </li>
-                            <li><a href="" data-toggle="modal" data-target="#contactus">Contact Us</a>
+                            <li><a href="#" data-toggle="modal" data-target="#contact-form">Contact Us</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
-                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="login.html" class="navbar-link">Log Out</a>
+                <p class="navbar-text navbar-right">You are logged in as MavisJheng / <a href="login.html" class="navbar-link">Log Out <span class="glyphicon glyphicon-log-out"></a>
                 </p>
             </div>
         </div>
@@ -61,54 +61,54 @@
     <!-- start of content -->
     <div class="container-fluid">
         <div class="row">
-            <!-- start of left content: service list tabs -->
-            <div class="col-md-2 pills">
+            <!-- start of left: service list pills -->
+            <div class="col-md-2 service-pills">
                 <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" class="active"><a href="#description" data-toggle="tab">Service Description</a>
+                    <li role="presentation" class="active"><a href="#service-description" data-toggle="tab">Service Description</a>
                     </li>
-                    <li role="presentation"><a href="#getalivereport" data-toggle="tab">Get Meter Alive Report</a>
+                    <li role="presentation"><a href="#get-alivereport" data-toggle="tab">Get Meter Alive Report</a>
                     </li>
-                    <li role="presentation"><a href="#updatepwd" data-toggle="tab">Update Meter Password</a>
+                    <li role="presentation"><a href="#update-pwd" data-toggle="tab">Update Meter Password</a>
                     </li>
                 </ul>
             </div>
-            <!-- start of right content: breadcrumb and services content -->
+            <!-- start of right: breadcrumb and service content -->
             <div class="col-md-10">
                 <!-- start of breadcrumb -->
                 <div class="breadcrumb">
                     <li>
                         <a href="index.html">Headend / </a>
                         <a href="platform.html">Platform Service / </a>
-                        <a href="#description">Service Description </a>
+                        <a href="">Service Description </a>
                     </li>
                 </div>
                 <!-- start of services content -->
                 <div class="tab-content">
                     <!-- start of service description -->
-                    <div class="tab-pane active" id="description">
+                    <div class="tab-pane active" id="service-description">
                         <p>Service Description is the first page of Platform Service.</p>
                         <p>This page tells how the functions work, and maybe screenshots, step by step instruction.</p>
                     </div>
                     <!-- start of get meter alive report -->
-                    <div class="tab-pane" id="getalivereport">
+                    <div class="tab-pane" id="get-alivereport">
                         <!-- start of get meter alive report request -->
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="starttime" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
+                                    <label for="getalivereport-starttime" class="col-md-offset-1 col-md-4 control-label">Start Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" name="starttime" class="form-control" id="starttime" required>
+                                        <input type="datetime-local" name="getalivereport-starttime" class="form-control" id="getalivereport-starttime" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="endtime" class="col-md-offset-1 col-md-4 control-label">End Time</label>
+                                    <label for="getalivereport-endtime" class="col-md-offset-1 col-md-4 control-label">End Time</label>
                                     <div class="col-md-7">
-                                        <input type="datetime-local" name="endtime" class="form-control" id="endtime" required>
+                                        <input type="datetime-local" name="getalivereport-endtime" class="form-control" id="getalivereport-endtime" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="getalivereportsubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="getalivereport-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -118,49 +118,49 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="getalivereport-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="getalivereport-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="getalivereport-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <label for="getalivereport-taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="taskuid">
+                                        <input type="text" class="form-control" id="getalivereport-taskuid">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="getalivereport-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="getalivereport-result"></textarea>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <!-- start of update meter password -->
-                    <div class="tab-pane" id="updatepwd">
+                    <div class="tab-pane" id="update-pwd">
                         <!-- start of update meter password request -->
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
+                                    <label for="updatepwd-meterid" class="col-md-offset-1 col-md-4 control-label">Meter ID</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="meterid" class="form-control" id="meterid" placeholder="20-digit" required>
+                                        <input type="text" name="updatepwd-meterid" class="form-control" id="updatepwd-meterid" placeholder="20-digit" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwd" class="col-md-offset-1 col-md-4 control-label">Password</label>
+                                    <label for="updatepwd-pwd" class="col-md-offset-1 col-md-4 control-label">Password</label>
                                     <div class="col-md-7">
-                                        <input type="text" name="pwd" class="form-control" id="pwd" required>
+                                        <input type="text" name="updatepwd-pwd" class="form-control" id="updatepwd-pwd" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-9 col-md-3">
-                                        <input type="submit" id="updatepwdsubmit" class="btn btn-success" value="Submit">
+                                        <input type="submit" id="updatepwd-submit" class="btn btn-success" value="Submit">
                                         <input type="reset" class="btn btn-danger" value="Reset">
                                     </div>
                                 </div>
@@ -170,24 +170,24 @@
                         <div class="col-md-8">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="response" class="col-md-offset-5 col-md-4 control-label">Response</label>
+                                    <label for="updatepwd-response" class="col-md-offset-5 col-md-4 control-label">Response</label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="status" class="col-md-offset-1 col-md-4 control-label">Status</label>
+                                    <label for="updatepwd-status" class="col-md-offset-1 col-md-4 control-label">Status</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="status">
+                                        <input type="text" class="form-control" id="updatepwd-status">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
+                                    <label for="updatepwd-taskuid" class="col-md-offset-1 col-md-4 control-label">Task Uid</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" id="taskuid">
+                                        <input type="text" class="form-control" id="updatepwd-taskuid">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="result" class="col-md-offset-1 col-md-4 control-label">Result</label>
+                                    <label for="updatepwd-result" class="col-md-offset-1 col-md-4 control-label">Result</label>
                                     <div class="col-md-7">
-                                        <textarea type="text" class="form-control" rows="5" id="result"></textarea>
+                                        <textarea type="text" class="form-control" rows="5" id="updatepwd-result"></textarea>
                                     </div>
                                 </div>
                             </form>
@@ -206,37 +206,37 @@
         </div>
     </div>
 
-    <!-- start of Contact Us Modal -->
-    <div class="modal fade" id="contactus">
+    <!-- start of Contact Us Form Modal -->
+    <div class="modal fade" id="contact-form">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
-                    <h4 class="modal-title" id="contactUsModalLabel">Contact AcBel</h4>
+                    <h4 class="modal-title">Contact AcBel</h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label for="contactName" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
+                            <label for="contact-name" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
                             <div class="col-sm-7">
-                                <input type="text" name="contactName" class="form-control" id="contactName" placeholder="Your Name" required>
+                                <input type="text" name="contact-name" class="form-control" id="contact-name" placeholder="Your Name" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contactEmail" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
+                            <label for="contact-email" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
                             <div class="col-sm-7">
-                                <input type="email" name="contactEmail" class="form-control" id="contactEmail" placeholder="you@example.com" required>
+                                <input type="email" name="contact-email" class="form-control" id="contact-email" placeholder="you@example.com" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contactMessage" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
+                            <label for="contact-message" class="col-sm-offset-2 col-sm-2 control-label">Message</label>
                             <div class="col-sm-7">
-                                <textarea type="text" name="contactMessage" class="form-control" rows="7" id="contactMessage" placeholder="Your Message here" required></textarea>
+                                <textarea type="text" name="contact-message" class="form-control" rows="7" id="contact-message" placeholder="Your Message here" required></textarea>
                             </div>
                         </div>
                         <div>
-                            <input type="submit" id="contactussubmit" class="btn btn-primary col-sm-offset-5" value="Submit">
+                            <input type="submit" id="contact-submit" class="btn btn-primary col-sm-offset-5" value="Submit">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </form>

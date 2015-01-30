@@ -1,21 +1,21 @@
 $(document).ready(function(){
-  $("#getalivereportsubmit").click(function(){
-    alert("Start Time: " + $("#starttime").val() +
-        "\nEnd Time: " + $("#endtime").val());
+  $("#getalivereport-submit").click(function(){
+    alert("Start Time: " + $("#getalivereport-starttime").val() +
+        "\nEnd Time: " + $("#getalivereport-endtime").val());
   });
 
-  $("#updatepwdsubmit").click(function(){
-    alert("Meter ID: " + $("#meterid").val() + 
-        "\nPassword: " + $("#pwd").val());
+  $("#updatepwd-submit").click(function(){
+    alert("Meter ID: " + $("#updatepwd-meterid").val() + 
+        "\nPassword: " + $("#updatepwd-pwd").val());
   });
 
-  $("#contactussubmit").click(function(){
-    alert("Name: " + $("#contactName").val() + 
-        "\nEmail: " + $("#contactEmail").val() +
-        "\nMessage: " + $("#contactMessage").val());
+  $("#contact-submit").click(function(){
+    alert("Name: " + $("#contact-name").val() + 
+        "\nEmail: " + $("#contact-email").val() +
+        "\nMessage: " + $("#contact-message").val());
   });
 
-  $('.pills a').click(function() {
+  $('.service-pills a').click(function() {
         var $this = $(this);
         var $bc = $('<li></li>');
 

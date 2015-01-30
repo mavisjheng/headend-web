@@ -1,32 +1,32 @@
 $(document).ready(function(){
-  $("#registersubmit").click(function(){
-    alert("User Name: " + $("#username").val() +
-        "\nProtocol: " + $("#protocol").val() +
-        "\nContent Type: " + $("#contenttype").val()+
-        "\nAddress: " + $("#address").val());
+  $("#register-submit").click(function(){
+    alert("User Name: " + $("#register-username").val() +
+        "\nProtocol: " + $("#register-protocol").val() +
+        "\nContent Type: " + $("#register-contenttype").val()+
+        "\nAddress: " + $("#register-address").val());
   });
 
-  $("#unregistersubmit").click(function(){
-    alert("User ID: " + $("#userid1").val());
+  $("#unregister-submit").click(function(){
+    alert("User ID: " + $("#unregister-userid").val());
   });
 
-  $("#subscribesubmit").click(function(){
-    alert("User ID: " + $("#userid2").val() + 
-        "\nNotification Type: " + $("#notificationtype1").val());
+  $("#subscribe-submit").click(function(){
+    alert("User ID: " + $("#subscribe-userid").val() + 
+        "\nNotification Type: " + $("#subscribe-notificationtype").val());
   });
 
-  $("#unsubscribesubmit").click(function(){
-    alert("User ID: " + $("#userid3").val() + 
-        "\nNotification Type: " + $("#notificationtype2").val());
+  $("#unsubscribe-submit").click(function(){
+    alert("User ID: " + $("#unsubscribe-userid").val() + 
+        "\nNotification Type: " + $("#unsubscribe-notificationtype").val());
   });
 
-  $("#contactussubmit").click(function(){
-    alert("Name: " + $("#contactName").val() + 
-        "\nEmail: " + $("#contactEmail").val() +
-        "\nMessage: " + $("#contactMessage").val());
+  $("#contact-submit").click(function(){
+    alert("Name: " + $("#contact-name").val() + 
+        "\nEmail: " + $("#contact-email").val() +
+        "\nMessage: " + $("#contact-message").val());
   });
 
-  $('.pills a').click(function() {
+  $('.service-pills a').click(function() {
         var $this = $(this);
         var $bc = $('<li></li>');
 
