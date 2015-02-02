@@ -1,76 +1,75 @@
 $(document).ready(function(){
   $("#meteraction-submit").click(function(){
-    alert("Action Type: " + $("#action-type :selected").val() +
-    	  "\nMeter ID: " + $("#meteraction-meterid").val() + 
-    	  "\nPassword: " + $("#meteraction-pwd").val());
+    alert("Action Type: " + $('select[name="action-type"]').val() +
+    	  "\nMeter ID: " + $('input[name="meteraction-meterid"]').val() + 
+    	  "\nPassword: " + $('input[name="meteraction-pwd"]').val());
   });
 
   $("#getcapability-submit").click(function(){
-    alert("Capability Type: " + $("#capability-type :selected").val() +
-    	  "\nMeter ID: " + $("#getcapability-meterid").val());
+    alert("Capability Type: " + $('select[name="capability-type"]').val() +
+    	  "\nMeter ID: " + $('input[name="getcapability-meterid"]').val());
   });
 
   $("#getusage-submit").click(function(){
-    alert("Usage Type: " + $("#getusage-type :selected").val() +
-    	  "\nMeter ID: " + $("#getusage-meterid").val());
+    alert("Usage Type: " + $('select[name="getusage-type"]').val() +
+    	  "\nMeter ID: " + $('input[name="getusage-meterid"]').val());
   });
 
   $("#gethistory-submit").click(function(){
-    alert("Data Type: " + $("#data-type :selected").val() +
-    	  "\nMeter ID: " + $("#gethistory-meterid").val() + 
-    	  "\nItem: " + $("#gethistory-item").val() + 
-    	  "\nStart Time: " + $("#gethistory-starttime").val() +
-    	  "\nEnd Time: " + $("#gethistory-endtime").val());
+    alert("Data Type: " + $('select[name="data-type"]').val() +
+    	  "\nMeter ID: " + $('input[name="gethistory-meterid"]').val() + 
+    	  "\nItem: " + $('input[name="gethistory-item"]').val() + 
+    	  "\nStart Time: " + $('input[name="gethistory-starttime"]').val() +
+    	  "\nEnd Time: " + $('input[name="gethistory-endtime"]').val());
   });
 
   $("#getinstant-submit").click(function(){
-    alert("Meter ID: " + $("#getinstant-meterid").val() + 
-        "\nItem: " + $("#getinstant-item").val());
+    alert("Meter ID: " + $('input[name="getinstant-meterid"]').val() + 
+        "\nItem: " + $('input[name="getinstant-item"]').val());
   });
 
   $("#setusage-submit").click(function(){
-    alert("Usage Type: " + $("#setusage-type :selected").val() +
-        "\nMeter ID: " + $("#setusage-meterid").val() +
-        "\nValue: " + $("#setusage-value").val());
+    alert("Usage Type: " + $('select[name="setusage-type"]').val() +
+        "\nMeter ID: " + $('input[name="setusage-meterid"]').val() +
+        "\nValue: " + $('input[name="setusage-value"]').val());
 
   });
 
   $("#settou-submit").click(function(){
-    alert("Meter ID: " + $("#settou-meterid").val() + 
-        "\nTou: " + $("#settou-tou").val());
+    alert("Meter ID: " + $('input[name="settou-meterid"]').val() + 
+        "\nTou: " + $('input[name="settou-tou"]').val());
   });
 
   $("#setregister-submit").click(function(){
-    alert("Meter ID: " + $("#setregister-meterid").val() +
-        "\nKey: " + $("#setregister-key").val() +
-        "\nValue: " + $("#setregister-value").val());
+    alert("Meter ID: " + $('input[name="setregister-meterid"]').val() +
+        "\nKey: " + $('input[name="setregister-key"]').val() +
+        "\nValue: " + $('input[name="setregister-value"]').val());
   });
 
   $("#setpwd-submit").click(function(){
-    alert("Meter ID: " + $("#setpwd-meterid").val() + 
-        "\nPassword: " + $("#setpwd-pwd").val());
+    alert("Meter ID: " + $('input[name="setpwd-meterid"]').val() + 
+        "\nPassword: " + $('input[name="setpwd-pwd"]').val());
   });
 
   $("#updateprogram-submit").click(function(){
-    alert("Meter ID: " + $("#updateprogram-meterid").val() + 
-        "\nURL: " + $("#updateprogram-url").val());
+    alert("Meter ID: " + $('input[name="updateprogram-meterid"]').val() + 
+        "\nURL: " + $('input[name="updateprogram-url"]').val());
   });
 
   $("#updatefirmware-submit").click(function(){
-    alert("Meter ID: " + $("#updatefirmware-meterid").val() + 
-        "\nURL: " + $("#updatefirmware-url").val());
+    alert("Meter ID: " + $('input[name="updatefirmware-meterid"]').val() + 
+        "\nURL: " + $('input[name="updatefirmware-url"]').val());
   });
 
   $("#sendihd-submit").click(function(){
-    alert("Meter ID: " + $("#sendihd-meterid").val() + 
-        "\nMessage: " + $("#sendihd-message").val());
+    alert("Meter ID: " + $('input[name="sendihd-meterid"]').val() + 
+        "\nMessage: " + $('input[name="sendihd-message"]').val());
   });
 
   $("#contact-submit").click(function(){
-    alert("Name: " + $("#contact-name").val() + 
-        "\nEmail: " + $("#contact-email").val() +
-        "\nMessage: " + $("#contact-message").val());
+    alert("Name: " + $('input[name="contact-name"]').val() + 
+        "\nEmail: " + $('input[name="contact-email"]').val() +
+        "\nMessage: " + $('textarea[name="contact-message"]').val());
   });
-
 });
 

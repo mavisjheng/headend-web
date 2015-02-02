@@ -1,18 +1,17 @@
 $(document).ready(function(){
   $("#getalivereport-submit").click(function(){
-    alert("Start Time: " + $("#getalivereport-starttime").val() +
-        "\nEnd Time: " + $("#getalivereport-endtime").val());
+    alert("Start Time: " + $('input[name="getalivereport-starttime"]').val() +
+        "\nEnd Time: " + $('input[name="getalivereport-endtime"]').val());
   });
 
   $("#updatepwd-submit").click(function(){
-    alert("Meter ID: " + $("#updatepwd-meterid").val() + 
-        "\nPassword: " + $("#updatepwd-pwd").val());
+    alert("Meter ID: " + $('input[name="updatepwd-meterid"]').val() + 
+        "\nPassword: " + $('input[name="updatepwd-pwd"]').val());
   });
 
   $("#contact-submit").click(function(){
-    alert("Name: " + $("#contact-name").val() + 
-        "\nEmail: " + $("#contact-email").val() +
-        "\nMessage: " + $("#contact-message").val());
+    alert("Name: " + $('input[name="contact-name"]').val() + 
+        "\nEmail: " + $('input[name="contact-email"]').val() +
+        "\nMessage: " + $('textarea[name="contact-message"]').val());
   });
-
 });

@@ -1,8 +1,7 @@
 $(document).ready(function(){
   $("#contact-submit").click(function(){
-    alert("Name: " + $("#contact-name").val() + 
-        "\nEmail: " + $("#contact-email").val() +
-        "\nMessage: " + $("#contact-message").val());
+    alert("Name: " + $('input[name="contact-name"]').val() + 
+        "\nEmail: " + $('input[name="contact-email"]').val() +
+        "\nMessage: " + $('textarea[name="contact-message"]').val());
   });
-
 });
